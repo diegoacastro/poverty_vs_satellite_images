@@ -8,7 +8,7 @@
 
 # Libraries ---------------------------------------------------------------
 library(tidyverse)
-library(glmnet)
+library(caret)
 
 
 # Import data -------------------------------------------------------------
@@ -29,13 +29,14 @@ gdp_lights <- lights %>%
             radiance_max = max(radiance),
             radiance_min = min(radiance),
             radiance_std = sd(radiance),
-            gdp_per_capita = min(gdp_per_capita)) %>% 
+            gdp_per_capita = min(gdp_per_capita),
+            gdp_per_capita_log = log(gdp_per_capita)) %>% 
   select(-city_code)
 
 gdp_lights_scaled <- gdp_lights %>% 
   mutate_each_(list(~scale(.) %>% as.vector), 
                vars=c("radiance_mean","radiance_median","radiance_max",
-                      "radiance_min","radiance_std","gdp_per_capita"))
+                      "radiance_min","radiance_std"))
 
 # Check cities in the shapefile that dont have gdp data
 setdiff(unique(lights$city_code), gdp_per_capita_data$city_code)
@@ -64,40 +65,106 @@ ggplot(gdp_lights, aes(x = radiance_median, y = gdp_per_capita)) +
   geom_point(color = "#1E90FF") +
   geom_smooth(method = lm, color = "black", fill = "gray")
 
-# Scaled variables
-ggplot(gdp_lights_scaled, aes(x = radiance_mean, y = gdp_per_capita)) + 
+# Log income
+ggplot(gdp_lights, aes(x = radiance_mean, y = gdp_per_capita_log)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "black", fill = "gray")
+
+ggplot(gdp_lights, aes(x = radiance_median, y = gdp_per_capita_log)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "black", fill = "gray")
+
+# Scaled variables and log income
+ggplot(gdp_lights_scaled, aes(x = radiance_mean, y = gdp_per_capita_log)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "black", fill = "gray")
+
+ggplot(gdp_lights_scaled, aes(x = radiance_median, y = gdp_per_capita_log)) + 
   geom_point(color = "#1E90FF") +
   geom_smooth(method = lm, color = "black", fill = "gray")
 
 
 # Evaluate ----------------------------------------------------------------
 
-# Level variables
-gdp_lights <- gdp_lights %>% data.matrix()
-lambdas <- 10^seq(3, -2, by = -.1)
-cv_fit <- cv.glmnet(gdp_lights[, 1:5], gdp_lights[, 6], alpha = 0, 
-                    lambda = lambdas, nfolds = 10)
-opt_lambda <- cv_fit$lambda.min
-fit <- cv_fit$glmnet.fit
-y_predicted <- predict(fit, s = opt_lambda, newx = gdp_lights[, 1:5])
-# Sum of Squares Total and Error
-sst <- sum((gdp_lights[, 6] - mean(gdp_lights[, 6]))^2)
-sse <- sum((y_predicted - gdp_lights[, 6])^2)
-# R squared
-rsq <- 1 - sse / sst
-rsq
+# Level
 
-# Scaled variables
-gdp_lights_scaled <- gdp_lights_scaled %>% data.matrix()
-lambdas <- 10^seq(3, -2, by = -.1)
-cv_fit <- cv.glmnet(gdp_lights_scaled[, 1:5], gdp_lights_scaled[, 6], alpha = 0, 
-                    lambda = lambdas, nfolds = 10)
-opt_lambda <- cv_fit$lambda.min
-fit <- cv_fit$glmnet.fit
-y_predicted <- predict(fit, s = opt_lambda, newx = gdp_lights_scaled[, 1:5])
-# Sum of Squares Total and Error
-sst <- sum((gdp_lights_scaled[, 6] - mean(gdp_lights_scaled[, 6]))^2)
-sse <- sum((y_predicted - gdp_lights_scaled[, 6])^2)
-# R squared
-rsq <- 1 - sse / sst
-rsq
+set.seed(123)
+
+cv_fit <- train(as.data.frame(gdp_lights[, 1:5]), gdp_lights$gdp_per_capita, 
+                method = "glmnet", 
+                trControl = trainControl(method="cv", 
+                                         number=10, 
+                                         savePredictions = "final"),
+                metric = "Rsquared",
+                tuneGrid = expand.grid(alpha = 0,
+                                       lambda = 10^seq(3, -2, by = -.1)))
+
+
+best_lambda <- cv_fit$bestTune[, 2]
+
+metric_best_lambda <- cv_fit$results %>% 
+  filter(lambda == best_lambda)
+
+print(paste("R2:", metric_best_lambda$Rsquared))
+print(paste("RMSE:", metric_best_lambda$RMSE))
+print(paste("MAE:", metric_best_lambda$MAE))
+
+ggplot(cv_fit$pred, aes(x = obs, y = pred)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "Darkblue", fill = "gray")
+
+
+# Log income
+
+set.seed(123)
+
+cv_fit <- train(as.data.frame(gdp_lights[, 1:5]), gdp_lights$gdp_per_capita_log, 
+                method = "glmnet", 
+                trControl = trainControl(method="cv", 
+                                         number=10, 
+                                         savePredictions = "final"),
+                metric = "Rsquared",
+                tuneGrid = expand.grid(alpha = 0,
+                                       lambda = 10^seq(3, -2, by = -.1)))
+
+
+best_lambda <- cv_fit$bestTune[, 2]
+
+metric_best_lambda <- cv_fit$results %>% 
+  filter(lambda == best_lambda)
+
+print(paste("R2:", metric_best_lambda$Rsquared))
+print(paste("RMSE:", metric_best_lambda$RMSE))
+print(paste("MAE:", metric_best_lambda$MAE))
+
+ggplot(cv_fit$pred, aes(x = obs, y = pred)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "Darkblue", fill = "gray")
+
+
+# Scaled variables and log income
+
+set.seed(123)
+
+cv_fit <- train(as.data.frame(gdp_lights_scaled[, 1:5]), gdp_lights_scaled$gdp_per_capita_log, 
+                method = "glmnet", 
+                trControl = trainControl(method="cv", 
+                                         number=10, 
+                                         savePredictions = "final"),
+                metric = "Rsquared",
+                tuneGrid = expand.grid(alpha = 0,
+                                       lambda = 10^seq(3, -2, by = -.1)))
+
+
+best_lambda <- cv_fit$bestTune[, 2]
+
+metric_best_lambda <- cv_fit$results %>% 
+  filter(lambda == best_lambda)
+
+print(paste("R2:", metric_best_lambda$Rsquared))
+print(paste("RMSE:", metric_best_lambda$RMSE))
+print(paste("MAE:", metric_best_lambda$MAE))
+
+ggplot(cv_fit$pred, aes(x = obs, y = pred)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "Darkblue", fill = "gray")

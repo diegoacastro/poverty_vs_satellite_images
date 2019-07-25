@@ -8,7 +8,7 @@
 
 # Libraries ---------------------------------------------------------------
 library(tidyverse)
-library(glmnet)
+library(caret)
 
 
 # Import data -------------------------------------------------------------
@@ -17,6 +17,14 @@ lights <- data.table::fread("input/model/download_coordinates.txt")
 salary_data <- data.table::fread("input/model/average_salary_df.txt") %>% 
   filter(state == "RS") %>% 
   select(city_code, average_wage)
+
+
+
+# Preprocess data ---------------------------------------------------------
+
+# Convert annual salary to monthly salary
+salary_data <- salary_data %>% 
+  mutate(average_wage = average_wage/12)
 
 
 # Join DFs and get the mean radiance per city -----------------------------
@@ -29,13 +37,14 @@ salary_lights <- lights %>%
             radiance_max = max(radiance),
             radiance_min = min(radiance),
             radiance_std = sd(radiance),
-            average_wage = min(average_wage)) %>% 
+            average_wage = min(average_wage),
+            average_wage_log = log(average_wage)) %>% 
   select(-city_code)
 
-salary_lights_scaled <- salary_lights %>% 
-  mutate_each_(list(~scale(.) %>% as.vector), 
+salary_lights_feat_scaled <- salary_lights %>% 
+  mutate_each_(list(~scale(., center = TRUE, scale = TRUE) %>% as.vector), 
                vars=c("radiance_mean","radiance_median","radiance_max",
-                      "radiance_min","radiance_std","average_wage"))
+                      "radiance_min","radiance_std"))
 
 # Check cities in the shapefile that dont have gdp data
 setdiff(unique(lights$city_code), salary_data$city_code)
@@ -64,40 +73,108 @@ ggplot(salary_lights, aes(x = radiance_median, y = average_wage)) +
   geom_point(color = "#1E90FF") +
   geom_smooth(method = lm, color = "black", fill = "gray")
 
+
+# Log salary
+ggplot(salary_lights, aes(x = radiance_mean, y = average_wage_log)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "black", fill = "gray")
+
+ggplot(salary_lights, aes(x = radiance_median, y = average_wage_log)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "black", fill = "gray")
+
+
 # Scaled variables
-ggplot(salary_lights_scaled, aes(x = radiance_mean, y = average_wage)) + 
+ggplot(salary_lights_feat_scaled, aes(x = radiance_mean, y = average_wage_log)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "black", fill = "gray")
+
+ggplot(salary_lights_feat_scaled, aes(x = radiance_median, y = average_wage_log)) + 
   geom_point(color = "#1E90FF") +
   geom_smooth(method = lm, color = "black", fill = "gray")
 
 
 # Evaluate ----------------------------------------------------------------
 
-# Level variables
-salary_lights <- salary_lights %>% data.matrix()
-lambdas <- 10^seq(3, -2, by = -.1)
-cv_fit <- cv.glmnet(salary_lights[, 1:5], salary_lights[, 6], alpha = 0, 
-                    lambda = lambdas, nfolds = 10)
-opt_lambda <- cv_fit$lambda.min
-fit <- cv_fit$glmnet.fit
-y_predicted <- predict(fit, s = opt_lambda, newx = salary_lights[, 1:5])
-# Sum of Squares Total and Error
-sst <- sum((salary_lights[, 6] - mean(salary_lights[, 6]))^2)
-sse <- sum((y_predicted - salary_lights[, 6])^2)
-# R squared
-rsq <- 1 - sse / sst
-rsq
+# Level
 
-# Scaled variables
-salary_lights_scaled <- salary_lights_scaled %>% data.matrix()
-lambdas <- 10^seq(3, -2, by = -.1)
-cv_fit <- cv.glmnet(salary_lights_scaled[, 1:5], salary_lights_scaled[, 6], alpha = 0, 
-                    lambda = lambdas, nfolds = 10)
-opt_lambda <- cv_fit$lambda.min
-fit <- cv_fit$glmnet.fit
-y_predicted <- predict(fit, s = opt_lambda, newx = salary_lights_scaled[, 1:5])
-# Sum of Squares Total and Error
-sst <- sum((salary_lights_scaled[, 6] - mean(salary_lights_scaled[, 6]))^2)
-sse <- sum((y_predicted - salary_lights_scaled[, 6])^2)
-# R squared
-rsq <- 1 - sse / sst
-rsq
+set.seed(123)
+
+cv_fit <- train(as.data.frame(salary_lights[, 1:5]), salary_lights$average_wage, 
+                method = "glmnet", 
+                trControl = trainControl(method="cv", 
+                                         number=10, 
+                                         savePredictions = "final"),
+                metric = "Rsquared",
+                tuneGrid = expand.grid(alpha = 0,
+                                       lambda = 10^seq(3, -2, by = -.1)))
+
+
+best_lambda <- cv_fit$bestTune[, 2]
+
+metric_best_lambda <- cv_fit$results %>% 
+  filter(lambda == best_lambda)
+
+print(paste("R2:", metric_best_lambda$Rsquared))
+print(paste("RMSE:", metric_best_lambda$RMSE))
+print(paste("MAE:", metric_best_lambda$MAE))
+
+ggplot(cv_fit$pred, aes(x = obs, y = pred)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "Darkblue", fill = "gray")
+
+
+# Log income
+
+set.seed(123)
+
+cv_fit <- train(as.data.frame(salary_lights[, 1:5]), salary_lights$average_wage_log, 
+                method = "glmnet", 
+                trControl = trainControl(method="cv", 
+                                         number=10, 
+                                         savePredictions = "final"),
+                metric = "Rsquared",
+                tuneGrid = expand.grid(alpha = 0,
+                                       lambda = 10^seq(3, -2, by = -.1)))
+
+
+best_lambda <- cv_fit$bestTune[, 2]
+
+metric_best_lambda <- cv_fit$results %>% 
+  filter(lambda == best_lambda)
+
+print(paste("R2:", metric_best_lambda$Rsquared))
+print(paste("RMSE:", metric_best_lambda$RMSE))
+print(paste("MAE:", metric_best_lambda$MAE))
+
+ggplot(cv_fit$pred, aes(x = obs, y = pred)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "Darkblue", fill = "gray")
+
+
+# Scaled variables and log income
+
+set.seed(123)
+
+cv_fit <- train(as.data.frame(salary_lights_feat_scaled[, 1:5]), salary_lights_feat_scaled$average_wage_log, 
+                method = "glmnet", 
+                trControl = trainControl(method="cv", 
+                                         number=10, 
+                                         savePredictions = "final"),
+                metric = "Rsquared",
+                tuneGrid = expand.grid(alpha = 0,
+                                       lambda = 10^seq(3, -2, by = -.1)))
+
+
+best_lambda <- cv_fit$bestTune[, 2]
+
+metric_best_lambda <- cv_fit$results %>% 
+  filter(lambda == best_lambda)
+
+print(paste("R2:", metric_best_lambda$Rsquared))
+print(paste("RMSE:", metric_best_lambda$RMSE))
+print(paste("MAE:", metric_best_lambda$MAE))
+
+ggplot(cv_fit$pred, aes(x = obs, y = pred)) + 
+  geom_point(color = "#1E90FF") +
+  geom_smooth(method = lm, color = "Darkblue", fill = "gray")

@@ -1,87 +1,46 @@
 ### Created by: Diego Afonso de Castro
-### Date: 15/07/2019
-### Objective: evaluate relation between lights (mean, median, max, min, std) 
-###            and income using only lights selected
+### Date: 24/07/2019
+### Objective: evaluate relation between daytime image features (mean, median,  
+###            max, min, std for each RGB) and income using only lights selected.
 
 ### ------------------------------------------------------------------------ ###
 
 
 # Libraries ---------------------------------------------------------------
+
 library(tidyverse)
 library(caret)
 
 
 # Import data -------------------------------------------------------------
-lights <- data.table::fread("input/model/download_coordinates.txt")
+
+features_basic = data.table::fread('input/model/google_image_features_basic.csv', 
+                                   header = FALSE,
+                                   sep = ' ')
+
+lights <- data.table::fread("input/model/download_coordinates.txt") %>% 
+  select(row_raster, col_raster, city_code)
 
 income_data <- data.table::fread("input/model/income_df.txt") %>% 
   filter(state == "RS") %>% 
   select(city_code = code, income)
 
 
-# Join DFs and get the mean radiance per city -----------------------------
-income_lights <- lights %>% 
-  left_join(., income_data, by = "city_code") %>% 
-  filter(!is.na(income)) %>% 
+# Join dataframes ---------------------------------------------------------
+
+images_income <- features_basic %>% 
+  left_join(., lights, by = c("V1" = "row_raster", "V2" = "col_raster")) %>% 
+  select(-(1:2)) %>% 
   group_by(city_code) %>% 
-  summarise(radiance_mean = mean(radiance),
-            radiance_median = median(radiance),
-            radiance_max = max(radiance),
-            radiance_min = min(radiance),
-            radiance_std = sd(radiance),
-            income = min(income),
-            income_log = log(income)) %>% 
+  summarise_all(.funs = mean) %>% 
+  ungroup() %>% 
+  inner_join(., income_data, by = "city_code") %>% 
+  mutate(income_log = log(income)) %>% 
   select(-city_code)
 
-income_lights_scaled <- income_lights %>% 
-  mutate_each_(list(~scale(., center = TRUE, scale = TRUE) %>% as.vector), 
-               vars=c("radiance_mean","radiance_median","radiance_max",
-                      "radiance_min","radiance_std"))
-
-# Check cities in the shapefile that dont have gdp data
-setdiff(unique(lights$city_code), income_data$city_code)
-
-# Check cities that have gdp data and are not in the shapefile 
-setdiff(income_data$city_code, unique(lights$city_code))
-
-# Clean enviroment
-rm(lights, income_data)
-gc()
-
-
-#### Obs: RS cities LAGOA MIRIM (4300001) and LAGOA DOS PATOS (4300002) are in the
-####      shapefile but don't have GDP data. PINTO BANDEIRA (4314548) has GDP data
-####      but is not in the shapefile
-
-
-# Plot relation -----------------------------------------------------------
-
-# Level variables
-ggplot(income_lights, aes(x = radiance_mean, y = income)) + 
-  geom_point(color = "#1E90FF") +
-  geom_smooth(method = lm, color = "black", fill = "gray")
-
-ggplot(income_lights, aes(x = radiance_median, y = income)) + 
-  geom_point(color = "#1E90FF") +
-  geom_smooth(method = lm, color = "black", fill = "gray")
-
-# Log income
-ggplot(income_lights, aes(x = radiance_mean, y = income_log)) + 
-  geom_point(color = "#1E90FF") +
-  geom_smooth(method = lm, color = "black", fill = "gray")
-
-ggplot(income_lights, aes(x = radiance_median, y = income_log)) + 
-  geom_point(color = "#1E90FF") +
-  geom_smooth(method = lm, color = "black", fill = "gray")
-
-# Scaled variables and log income
-ggplot(income_lights_scaled, aes(x = radiance_mean, y = income_log)) + 
-  geom_point(color = "#1E90FF") +
-  geom_smooth(method = lm, color = "black", fill = "gray")
-
-ggplot(income_lights_scaled, aes(x = radiance_median, y = income_log)) + 
-  geom_point(color = "#1E90FF") +
-  geom_smooth(method = lm, color = "black", fill = "gray")
+images_income_scaled <- images_income %>%
+  mutate_at(.vars = names(images_income)[1:15], 
+            .funs = list(~scale(., center = TRUE, scale = TRUE) %>% as.vector))
 
 
 # Evaluate ----------------------------------------------------------------
@@ -90,7 +49,7 @@ ggplot(income_lights_scaled, aes(x = radiance_median, y = income_log)) +
 
 set.seed(123)
 
-cv_fit <- train(as.data.frame(income_lights[, 1:5]), income_lights$income, 
+cv_fit <- train(as.data.frame(images_income[, 1:15]), images_income$income, 
                 method = "glmnet", 
                 trControl = trainControl(method="cv", 
                                          number=10, 
@@ -118,7 +77,7 @@ ggplot(cv_fit$pred, aes(x = obs, y = pred)) +
 
 set.seed(123)
 
-cv_fit <- train(as.data.frame(income_lights[, 1:5]), income_lights$income_log, 
+cv_fit <- train(as.data.frame(images_income[, 1:15]), images_income$income_log, 
                 method = "glmnet", 
                 trControl = trainControl(method="cv", 
                                          number=10, 
@@ -146,7 +105,7 @@ ggplot(cv_fit$pred, aes(x = obs, y = pred)) +
 
 set.seed(123)
 
-cv_fit <- train(as.data.frame(income_lights_scaled[, 1:5]), income_lights_scaled$income_log, 
+cv_fit <- train(as.data.frame(images_income_scaled[, 1:15]), images_income_scaled$income_log, 
                 method = "glmnet", 
                 trControl = trainControl(method="cv", 
                                          number=10, 
