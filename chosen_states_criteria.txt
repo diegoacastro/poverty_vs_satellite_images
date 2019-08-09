@@ -1,0 +1,4 @@
+Escolha de estados:
+
+- Requisito: possuir mais de 400 municípios (https://pt.wikipedia.org/wiki/Munic%C3%ADpios_do_Brasil);
+- Critério: maior e menor indíces de gini (planilha na pasta root)

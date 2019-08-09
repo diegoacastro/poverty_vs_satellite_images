@@ -1,0 +1,4 @@
+Observations:
+
+- VIIRS night-time lights cell size (resolution): aprox. 745m;
+- DMSP-OLS night-time lights cell size (resolution): aprox. 1000m;
