@@ -1,0 +1,3 @@
+Tabela 3548 - Pessoas de 10 anos ou mais de idade, Valor do rendimento nominal médio mensal, e mediano mensal, das pessoas de 10 anos ou mais de idade, por condição de atividade na semana de referência, segundo a situação do domicílio, o sexo, as classes de rendimento nominal mensal e os grupos de idade
+Variável,"Nível","Cód.","Município","Ano","Classes de rendimento nominal mensal","Grupo de idade","Condição de atividade x Situação do domicílio x Sexo"
+Variável,"Nível","Cód.","Município","Ano","Classes de rendimento nominal mensal","Grupo de idade","Total"

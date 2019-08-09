@@ -1,0 +1,10 @@
+Training transfer:
+
+epochs = 100
+early_stopping => pacience = 10
+
+It ran 34 epochs and, then, early stopping.
+
+Highest validation accuracy: 0.85713
+Test accuracy after training: 0.8556451612903225
+

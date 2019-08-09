@@ -1,0 +1,23 @@
+Results nightlights_GMM
+
+
+After clustering the 100 nearest nightlights to all Brazilian city centers:
+
++ 55.89% were in low;
++ 28.53% in medium.
++ 15.58% in high;
+
+Classes averages:
+
++ low: 0.209029
++ medium: 3.822921
++ high: 27.382732
+
+Classes boundaries:
+
+Class		min		max
+low		0		0.872354
+medium		0.872369	10.370063
+high		10.371181	401.988708
+
+
