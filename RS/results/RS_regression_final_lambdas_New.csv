@@ -1,0 +1,81 @@
+Variable,Model,Detail,R2,RMSE,MAE
+lights vs gdp per capita,ridge regression,Features standardised and Y in log,0.0330234604839439,0.431407887701982,0.341159125233354
+lights vs gdp per capita,lasso regression,Features standardised and Y in log,,0.434733970368219,0.34590702942832
+lights vs gdp per capita,ridge regression,Features and Y in level,0.0332230051958915,19.2256408054004,12.4491846617498
+lights vs gdp per capita,lasso regression,Features and Y in level,,19.2437256922607,12.4315293697978
+Images basic features vs gdp per capita,ridge regression,Features standardised and Y in log,,0.432772365597954,0.343244616382761
+Images basic features vs gdp per capita,lasso regression,Features standardised and Y in log,,0.434733970368219,0.34590702942832
+Images basic features vs gdp per capita,ridge regression,Features and Y in level,,19.2788385435408,12.6092384708867
+Images basic features vs gdp per capita,lasso regression,Features and Y in level,,19.282078359722,12.6120026237227
+Images VGG vs gdp per capita,lasso regression,Features standardised and Y in log,,0.434733970368219,0.34590702942832
+Images VGG vs gdp per capita,lasso regression,Features and Y in level,0.1699568019004,17.9853075654416,10.856979790438
+Images VGG vs gdp per capita,ridge regression pca,Features standardised and Y in log,0.288250571205121,0.374388359395623,0.280247085611945
+Images VGG vs gdp per capita,ridge regression pca,Features and Y in level,0.186004147395448,17.9052986080976,10.6509414384863
+lights vs salary,ridge regression,Features standardised and Y in log,0.0858225889163415,0.199263921675314,0.149035192651804
+lights vs salary,lasso regression,Features standardised and Y in log,,0.206908856816666,0.154106196748684
+lights vs salary,ridge regression,Features and Y in level,0.0883615839595511,372.229672164168,269.407240963049
+lights vs salary,lasso regression,Features and Y in level,0.0892887960355382,376.679407980983,270.562018629819
+Images basic features vs salary,ridge regression,Features standardised and Y in log,0.0341079358848289,0.204324356175668,0.152774379813265
+Images basic features vs salary,lasso regression,Features standardised and Y in log,,0.206908856816666,0.154106196748684
+Images basic features vs salary,ridge regression,Features and Y in level,0.0403334451182877,379.432608129279,275.161510739445
+Images basic features vs salary,lasso regression,Features and Y in level,0.0367745033563336,380.229899204474,275.462057624315
+Images VGG vs salary,lasso regression,Features standardised and Y in log,,0.206908856816666,0.154106196748684
+Images VGG vs salary,lasso regression,Features and Y in level,0.0899336450286321,376.097552827418,268.176670927796
+Images VGG vs salary,ridge regression pca,Features standardised and Y in log,0.0970210448742951,0.201258506865686,0.149650441568939
+Images VGG vs salary,ridge regression pca,Features and Y in level,0.114769053125466,386.209402763895,282.140524930403
+Transfer learning vs salary,lasso regression,Features standardised and Y in log,,0.206908856816666,0.154106196748684
+Transfer learning vs salary,lasso regression,Features and Y in level,0.137164782999535,364.169297390819,260.196763360181
+Transfer learning vs salary,ridge regression pca,Features standardised and Y in log,0.139383982127302,0.197007525131981,0.146336613011976
+Transfer learning vs salary,ridge regression pca,Features and Y in level,0.16160459412629,359.378766587935,260.95256684963
+lights vs average income,ridge regression,Features standardised and Y in log,0.123469713033491,0.251864359634087,0.208171728829588
+lights vs average income,lasso regression,Features standardised and Y in log,,0.266124244670787,0.218830663919956
+lights vs average income,ridge regression,Features and Y in level,0.127248947031114,211.153593951394,170.824181298593
+lights vs average income,lasso regression,Features and Y in level,0.124391346247961,211.403896957435,170.906770316433
+Images basic features vs average income,ridge regression,Features standardised and Y in log,0.0881868205206524,0.257842842502747,0.211390771188779
+Images basic features vs average income,lasso regression,Features standardised and Y in log,,0.266124244670787,0.218830663919956
+Images basic features vs average income,ridge regression,Features and Y in level,0.0769827397563824,217.084773970394,174.602118087358
+Images basic features vs average income,lasso regression,Features and Y in level,0.092169400246078,213.765873198024,171.2207251601
+Images VGG vs average income,lasso regression,Features standardised and Y in log,,0.266124244670787,0.218830663919956
+Images VGG vs average income,lasso regression,Features and Y in level,0.422242229892881,172.156764562522,131.946283424823
+Images VGG vs average income,ridge regression pca,Features standardised and Y in log,0.404896678293957,0.221809797717716,0.178159983814963
+Images VGG vs average income,ridge regression pca,Features and Y in level,0.394715907802108,175.864750467283,130.672078941474
+Transfer learning vs average income,lasso regression,Features standardised and Y in log,,0.266124244670787,0.218830663919956
+Transfer learning vs average income,lasso regression,Features and Y in level,0.318409839122954,184.703305172945,142.400745629207
+Transfer learning vs average income,ridge regression pca,Features standardised and Y in log,0.315410951663223,0.235254252167741,0.189664131467397
+Transfer learning vs average income,ridge regression pca,Features and Y in level,0.315832331115638,185.847843589878,142.992258097528
+lights vs median income,ridge regression,Features standardised and Y in log,0.0552601416134289,0.201564080365288,0.128352822646977
+lights vs median income,lasso regression,Features standardised and Y in log,,0.206218271614687,0.134095329287807
+lights vs median income,ridge regression,Features and Y in level,0.0460519321680247,105.79161948512,74.2992452822873
+lights vs median income,lasso regression,Features and Y in level,0.0499382573976645,105.563955886594,74.1038799339221
+Images basic features vs median income,ridge regression,Features standardised and Y in log,0.0803031328953203,0.200338143174274,0.1269161954059
+Images basic features vs median income,lasso regression,Features standardised and Y in log,,0.206218271614687,0.134095329287807
+Images basic features vs median income,ridge regression,Features and Y in level,0.0678240515404751,105.523700067082,73.9678928022941
+Images basic features vs median income,lasso regression,Features and Y in level,0.0547757069350285,106.078376259267,74.292934346563
+Images VGG vs median income,lasso regression,Features standardised and Y in log,,0.206218271614687,0.134095329287807
+Images VGG vs median income,lasso regression,Features and Y in level,0.442385711679726,80.9049993679753,56.3736517587414
+Images VGG vs median income,ridge regression pca,Features standardised and Y in log,0.312554176030447,0.181161676233222,0.109463886279937
+Images VGG vs median income,ridge regression pca,Features and Y in level,0.418658678232652,82.8807417946624,58.0617477600574
+Transfer learning vs median income,lasso regression,Features standardised and Y in log,,0.206218271614687,0.134095329287807
+Transfer learning vs median income,lasso regression,Features and Y in level,0.391297400367749,84.650698588307,58.3963208892522
+Transfer learning vs median income,ridge regression pca,Features standardised and Y in log,0.337552961315427,0.183550067091547,0.109809446821223
+Transfer learning vs median income,ridge regression pca,Features and Y in level,0.407863351307283,83.4963920208471,57.3696673202604
+lights vs water,ridge regression,Features standardised and Y in log,0.245419892633764,0.168300951382658,0.123889994154847
+lights vs water,lasso regression,Features standardised and Y in log,,0.187106440828326,0.141548493327937
+lights vs water,ridge regression,Features and Y in level,0.286118971310246,0.0940379792379197,0.0718878480068652
+lights vs water,lasso regression,Features and Y in level,0.272317881899151,0.0966857686132484,0.0748028807826441
+Images basic features vs water,ridge regression,Features standardised and Y in log,0.181430490604914,0.173638124767382,0.130672598482793
+Images basic features vs water,lasso regression,Features standardised and Y in log,,0.187106440828326,0.141548493327937
+Images basic features vs water,ridge regression,Features and Y in level,0.0917549226818848,0.108380747814555,0.0857328475512247
+Images basic features vs water,lasso regression,Features and Y in level,,0.108422434849964,0.0857565226469049
+Images VGG vs water,lasso regression,Features standardised and Y in log,,0.187106440828326,0.141548493327937
+Images VGG vs water,lasso regression,Features and Y in level,,0.108422434849964,0.0857565226469049
+Images VGG vs water,ridge regression pca,Features standardised and Y in log,0.194217410135992,0.173555326623322,0.129217021342217
+Images VGG vs water,ridge regression pca,Features and Y in level,0.311229679679969,0.0910236442957265,0.0688813783523372
+Transfer learning vs water,lasso regression,Features standardised and Y in log,,0.187106440828326,0.141548493327937
+Transfer learning vs water,lasso regression,Features and Y in level,,0.108422434849964,0.0857565226469049
+Transfer learning vs water,ridge regression pca,Features standardised and Y in log,0.27118929299038,0.1714091737677,0.127124265600175
+Transfer learning vs water,ridge regression pca,Features and Y in level,0.348547078025403,0.088524408445763,0.0663375150117948
+Transfer learning vs gdp per capita,lasso regression,Features standardised and Y in log,,0.434733970368219,0.34590702942832
+Transfer learning vs gdp per capita,lasso regression,Features and Y in level,0.0905581358807989,18.8235515533025,11.8997085610705
+Transfer learning vs gdp per capita,ridge regression pca,Features standardised and Y in log,0.282832596629653,0.380153038486014,0.287259938185316
+Transfer learning vs gdp per capita,ridge regression pca,Features and Y in level,0.177552368859693,17.9402559053656,10.553415235499

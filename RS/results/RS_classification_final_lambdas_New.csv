@@ -1,0 +1,633 @@
+Variable,Model,Detail,Sampling,Accuracy,F1_low,F1_high,Precision_low,Recall_low,Precision_high,Recall_high
+lights vs gdp per capita,logistic ridge regression,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic ridge regression,Features standardised,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic ridge regression,Features standardised,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic ridge regression,Features standardised,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic lasso regression,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic lasso regression,Features standardised,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic lasso regression,Features standardised,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic lasso regression,Features standardised,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic ridge regression,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic ridge regression,Features level,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic ridge regression,Features level,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic ridge regression,Features level,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic lasso regression,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic lasso regression,Features level,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic lasso regression,Features level,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,logistic lasso regression,Features level,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,Decision Tree,Features standardised,no sampling,0.939516129032258,,0.968814968814969,0,0,0.945233265720081,0.993603411513859
+lights vs gdp per capita,Decision Tree,Features standardised,down,0.536290322580645,0.1015625,0.6875,0.0567685589519651,0.481481481481482,0.947565543071161,0.539445628997868
+lights vs gdp per capita,Decision Tree,Features standardised,up,0.850806451612903,0.075,0.918859649122807,0.0566037735849057,0.111111111111111,0.945823927765237,0.893390191897655
+lights vs gdp per capita,Decision Tree,Features standardised,smote,0.63508064516129,0.117073170731707,0.770012706480305,0.0674157303370787,0.444444444444444,0.952830188679245,0.646055437100213
+lights vs gdp per capita,Gradient Boosting,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,Gradient Boosting,Features standardised,down,0.544354838709677,0.0813008130081301,0.697050938337802,0.045662100456621,0.37037037037037,0.938628158844765,0.554371002132196
+lights vs gdp per capita,Gradient Boosting,Features standardised,up,0.919354838709677,,0.957983193277311,0,0,0.944099378881988,0.97228144989339
+lights vs gdp per capita,Gradient Boosting,Features standardised,smote,0.745967741935484,0.0454545454545455,0.853488372093023,0.0285714285714286,0.111111111111111,0.938618925831202,0.782515991471215
+lights vs gdp per capita,Decision Tree,Features level,no sampling,0.939516129032258,,0.968814968814969,0,0,0.945233265720081,0.993603411513859
+lights vs gdp per capita,Decision Tree,Features level,down,0.48991935483871,0.0931899641577061,0.645161290322581,0.0515873015873016,0.481481481481482,0.942622950819672,0.490405117270789
+lights vs gdp per capita,Decision Tree,Features level,up,0.86491935483871,0.0821917808219178,0.927094668117519,0.0652173913043478,0.111111111111111,0.946666666666667,0.908315565031983
+lights vs gdp per capita,Decision Tree,Features level,smote,0.604838709677419,0.0841121495327103,0.748071979434447,0.0481283422459893,0.333333333333333,0.941747572815534,0.62046908315565
+lights vs gdp per capita,Gradient Boosting,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+lights vs gdp per capita,Gradient Boosting,Features level,down,0.532258064516129,0.09375,0.684782608695652,0.0524017467248908,0.444444444444444,0.943820224719101,0.537313432835821
+lights vs gdp per capita,Gradient Boosting,Features level,up,0.917338709677419,0.0888888888888889,0.956705385427666,0.111111111111111,0.0740740740740741,0.947698744769875,0.965884861407249
+lights vs gdp per capita,Gradient Boosting,Features level,smote,0.741935483870968,0.0447761194029851,0.850815850815851,0.0280373831775701,0.111111111111111,0.938303341902314,0.778251599147122
+Images basic features vs gdp per capita,logistic ridge regression,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic ridge regression,Features standardised,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic ridge regression,Features standardised,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic ridge regression,Features standardised,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic lasso regression,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic lasso regression,Features standardised,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic lasso regression,Features standardised,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic lasso regression,Features standardised,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic ridge regression,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic ridge regression,Features level,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic ridge regression,Features level,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic ridge regression,Features level,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic lasso regression,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic lasso regression,Features level,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic lasso regression,Features level,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,logistic lasso regression,Features level,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,Decision Tree,Features standardised,no sampling,0.939516129032258,,0.968814968814969,0,0,0.945233265720081,0.993603411513859
+Images basic features vs gdp per capita,Decision Tree,Features standardised,down,0.548387096774194,0.118110236220472,0.696476964769648,0.066079295154185,0.555555555555556,0.955390334572491,0.547974413646056
+Images basic features vs gdp per capita,Decision Tree,Features standardised,up,0.862903225806452,0.0285714285714286,0.926247288503254,0.0232558139534884,0.037037037037037,0.942604856512141,0.91044776119403
+Images basic features vs gdp per capita,Decision Tree,Features standardised,smote,0.6875,0.104046242774566,0.810744810744811,0.0616438356164384,0.333333333333333,0.948571428571429,0.707889125799574
+Images basic features vs gdp per capita,Gradient Boosting,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,Gradient Boosting,Features standardised,down,0.612903225806452,0.150442477876106,0.74934725848564,0.085427135678392,0.62962962962963,0.966329966329966,0.611940298507463
+Images basic features vs gdp per capita,Gradient Boosting,Features standardised,up,0.935483870967742,0.0588235294117647,0.966597077244259,0.142857142857143,0.037037037037037,0.946830265848671,0.987206823027719
+Images basic features vs gdp per capita,Gradient Boosting,Features standardised,smote,0.788306451612903,0.16,0.878892733564014,0.102040816326531,0.37037037037037,0.957286432160804,0.812366737739872
+Images basic features vs gdp per capita,Decision Tree,Features level,no sampling,0.939516129032258,,0.968814968814969,0,0,0.945233265720081,0.993603411513859
+Images basic features vs gdp per capita,Decision Tree,Features level,down,0.526209677419355,0.113207547169811,0.676753782668501,0.0630252100840336,0.555555555555556,0.953488372093023,0.52452025586354
+Images basic features vs gdp per capita,Decision Tree,Features level,up,0.86491935483871,0.0563380281690141,0.927252985884908,0.0454545454545455,0.0740740740740741,0.944690265486726,0.91044776119403
+Images basic features vs gdp per capita,Decision Tree,Features level,smote,0.685483870967742,0.113636363636364,0.808823529411765,0.0671140939597315,0.37037037037037,0.951008645533141,0.70362473347548
+Images basic features vs gdp per capita,Gradient Boosting,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images basic features vs gdp per capita,Gradient Boosting,Features level,down,0.616935483870968,0.144144144144144,0.753246753246753,0.082051282051282,0.592592592592593,0.963455149501661,0.618336886993603
+Images basic features vs gdp per capita,Gradient Boosting,Features level,up,0.9375,0.0606060606060606,0.967674661105318,0.166666666666667,0.037037037037037,0.946938775510204,0.989339019189765
+Images basic features vs gdp per capita,Gradient Boosting,Features level,smote,0.786290322580645,0.208955223880597,0.876456876456876,0.130841121495327,0.518518518518519,0.966580976863753,0.801705756929638
+Images VGG vs gdp per capita,logistic ridge regression with pca,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic ridge regression with pca,Features standardised,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic ridge regression with pca,Features standardised,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic ridge regression with pca,Features standardised,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic lasso regression without pca,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic lasso regression without pca,Features standardised,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic lasso regression without pca,Features standardised,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic lasso regression without pca,Features standardised,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic ridge regression with pca,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic ridge regression with pca,Features level,down,0.943548387096774,0.0666666666666667,0.970893970893971,0.333333333333333,0.037037037037037,0.947261663286004,0.995735607675906
+Images VGG vs gdp per capita,logistic ridge regression with pca,Features level,up,0.939516129032258,0.0625,0.96875,0.2,0.037037037037037,0.94704684317719,0.991471215351812
+Images VGG vs gdp per capita,logistic ridge regression with pca,Features level,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic lasso regression without pca,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic lasso regression without pca,Features level,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic lasso regression without pca,Features level,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,logistic lasso regression without pca,Features level,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,Decision Tree,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,Decision Tree,Features standardised,down,0.602822580645161,0.124444444444444,0.743155149934811,0.0707070707070707,0.518518518518519,0.956375838926174,0.607675906183369
+Images VGG vs gdp per capita,Decision Tree,Features standardised,up,0.891129032258064,0.0357142857142857,0.942307692307692,0.0344827586206897,0.037037037037037,0.944325481798715,0.940298507462687
+Images VGG vs gdp per capita,Decision Tree,Features standardised,smote,0.754032258064516,0.128571428571429,0.856807511737089,0.079646017699115,0.333333333333333,0.953002610966058,0.778251599147122
+Images VGG vs gdp per capita,Gradient Boosting,Features standardised,no sampling,0.94758064516129,0.0714285714285714,0.973029045643153,1,0.037037037037037,0.947474747474747,1
+Images VGG vs gdp per capita,Gradient Boosting,Features standardised,down,0.643145161290323,0.184331797235023,0.771612903225806,0.105263157894737,0.740740740740741,0.977124183006536,0.637526652452026
+Images VGG vs gdp per capita,Gradient Boosting,Features standardised,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,Gradient Boosting,Features standardised,smote,0.860887096774194,0.168674698795181,0.924092409240924,0.125,0.259259259259259,0.954545454545455,0.895522388059702
+Images VGG vs gdp per capita,Decision Tree,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Images VGG vs gdp per capita,Decision Tree,Features level,down,0.516129032258065,0.0909090909090909,0.67032967032967,0.0506329113924051,0.444444444444444,0.942084942084942,0.520255863539446
+Images VGG vs gdp per capita,Decision Tree,Features level,up,0.917338709677419,0.0888888888888889,0.956705385427666,0.111111111111111,0.0740740740740741,0.947698744769875,0.965884861407249
+Images VGG vs gdp per capita,Decision Tree,Features level,smote,0.731854838709677,0.119205298013245,0.841854934601665,0.0725806451612903,0.333333333333333,0.951612903225806,0.754797441364606
+Images VGG vs gdp per capita,Gradient Boosting,Features level,no sampling,0.94758064516129,0.0714285714285714,0.973029045643153,1,0.037037037037037,0.947474747474747,1
+Images VGG vs gdp per capita,Gradient Boosting,Features level,down,0.653225806451613,0.14,0.782828282828283,0.0809248554913295,0.518518518518519,0.959752321981424,0.660980810234542
+Images VGG vs gdp per capita,Gradient Boosting,Features level,up,0.94758064516129,0.0714285714285714,0.973029045643153,1,0.037037037037037,0.947474747474747,1
+Images VGG vs gdp per capita,Gradient Boosting,Features level,smote,0.850806451612903,0.177777777777778,0.917960088691796,0.126984126984127,0.296296296296296,0.956120092378753,0.88272921108742
+Transfer learning vs gdp per capita,logistic ridge regression with pca,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic ridge regression with pca,Features standardised,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic ridge regression with pca,Features standardised,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic ridge regression with pca,Features standardised,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic lasso regression without pca,Features standardised,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic lasso regression without pca,Features standardised,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic lasso regression without pca,Features standardised,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic lasso regression without pca,Features standardised,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic ridge regression with pca,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic ridge regression with pca,Features level,down,0.943548387096774,,0.970954356846473,0,0,0.945454545454546,0.997867803837953
+Transfer learning vs gdp per capita,logistic ridge regression with pca,Features level,up,0.943548387096774,,0.970954356846473,0,0,0.945454545454546,0.997867803837953
+Transfer learning vs gdp per capita,logistic ridge regression with pca,Features level,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic lasso regression without pca,Features level,no sampling,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic lasso regression without pca,Features level,down,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic lasso regression without pca,Features level,up,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,logistic lasso regression without pca,Features level,smote,0.945564516129032,,0.972020725388601,,0,0.945564516129032,1
+Transfer learning vs gdp per capita,Decision Tree,Features standardised,no sampling,0.929435483870968,0.0540540540540541,0.963350785340314,0.1,0.037037037037037,0.946502057613169,0.980810234541578
+Transfer learning vs gdp per capita,Decision Tree,Features standardised,down,0.554435483870968,0.112449799196787,0.702557200538358,0.0630630630630631,0.518518518518519,0.952554744525547,0.556503198294243
+Transfer learning vs gdp per capita,Decision Tree,Features standardised,up,0.883064516129032,0.171428571428571,0.937093275488069,0.13953488372093,0.222222222222222,0.95364238410596,0.921108742004264
+Transfer learning vs gdp per capita,Decision Tree,Features standardised,smote,0.703629032258065,0.169491525423729,0.819631901840491,0.1,0.555555555555556,0.965317919075144,0.712153518123667
+Transfer learning vs gdp per capita,Gradient Boosting,Features standardised,no sampling,0.949596774193548,0.193548387096774,0.973985431841831,0.75,0.111111111111111,0.951219512195122,0.997867803837953
+Transfer learning vs gdp per capita,Gradient Boosting,Features standardised,down,0.653225806451613,0.180952380952381,0.780051150895141,0.103825136612022,0.703703703703704,0.97444089456869,0.650319829424307
+Transfer learning vs gdp per capita,Gradient Boosting,Features standardised,up,0.943548387096774,0.0666666666666667,0.970893970893971,0.333333333333333,0.037037037037037,0.947261663286004,0.995735607675906
+Transfer learning vs gdp per capita,Gradient Boosting,Features standardised,smote,0.844758064516129,0.222222222222222,0.913773796192609,0.152777777777778,0.407407407407407,0.962264150943396,0.869936034115139
+Transfer learning vs gdp per capita,Decision Tree,Features level,no sampling,0.929435483870968,0.0540540540540541,0.963350785340314,0.1,0.037037037037037,0.946502057613169,0.980810234541578
+Transfer learning vs gdp per capita,Decision Tree,Features level,down,0.580645161290323,0.140495867768595,0.722666666666667,0.0790697674418605,0.62962962962963,0.9644128113879,0.577825159914712
+Transfer learning vs gdp per capita,Decision Tree,Features level,up,0.872983870967742,0.136986301369863,0.931447225244831,0.108695652173913,0.185185185185185,0.951111111111111,0.912579957356077
+Transfer learning vs gdp per capita,Decision Tree,Features level,smote,0.67741935483871,0.120879120879121,0.802469135802469,0.0709677419354839,0.407407407407407,0.953079178885631,0.692963752665245
+Transfer learning vs gdp per capita,Gradient Boosting,Features level,no sampling,0.949596774193548,0.242424242424242,0.97393117831074,0.666666666666667,0.148148148148148,0.953061224489796,0.995735607675906
+Transfer learning vs gdp per capita,Gradient Boosting,Features level,down,0.645161290322581,0.161904761904762,0.774936061381074,0.092896174863388,0.62962962962963,0.968051118210863,0.646055437100213
+Transfer learning vs gdp per capita,Gradient Boosting,Features level,up,0.941532258064516,0.121212121212121,0.969760166840459,0.333333333333333,0.0740740740740741,0.948979591836735,0.991471215351812
+Transfer learning vs gdp per capita,Gradient Boosting,Features level,smote,0.838709677419355,0.259259259259259,0.909502262443439,0.17283950617284,0.518518518518519,0.968674698795181,0.857142857142857
+lights vs salary,logistic ridge regression,Features standardised,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic ridge regression,Features standardised,down,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic ridge regression,Features standardised,up,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic ridge regression,Features standardised,smote,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic lasso regression,Features standardised,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic lasso regression,Features standardised,down,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic lasso regression,Features standardised,up,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic lasso regression,Features standardised,smote,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic ridge regression,Features level,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic ridge regression,Features level,down,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic ridge regression,Features level,up,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic ridge regression,Features level,smote,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic lasso regression,Features level,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic lasso regression,Features level,down,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic lasso regression,Features level,up,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,logistic lasso regression,Features level,smote,0.6875,,0.814814814814815,,0,0.6875,1
+lights vs salary,Decision Tree,Features standardised,no sampling,0.639112903225807,0.292490118577075,0.757780784844384,0.377551020408163,0.238709677419355,0.703517587939699,0.821114369501466
+lights vs salary,Decision Tree,Features standardised,down,0.560483870967742,0.446700507614213,0.635451505016722,0.368200836820084,0.567741935483871,0.739299610894942,0.557184750733138
+lights vs salary,Decision Tree,Features standardised,up,0.57258064516129,0.420765027322404,0.661341853035144,0.364928909952607,0.496774193548387,0.726315789473684,0.607038123167155
+lights vs salary,Decision Tree,Features standardised,smote,0.574596774193548,0.381231671554252,0.675883256528418,0.349462365591398,0.419354838709677,0.709677419354839,0.645161290322581
+lights vs salary,Gradient Boosting,Features standardised,no sampling,0.683467741935484,0.0484848484848485,0.810157194679565,0.4,0.0258064516129032,0.689300411522634,0.982404692082111
+lights vs salary,Gradient Boosting,Features standardised,down,0.594758064516129,0.488549618320611,0.664440734557596,0.403361344537815,0.619354838709677,0.771317829457364,0.583577712609971
+lights vs salary,Gradient Boosting,Features standardised,up,0.639112903225807,0.435331230283912,0.734814814814815,0.425925925925926,0.445161290322581,0.74251497005988,0.727272727272727
+lights vs salary,Gradient Boosting,Features standardised,smote,0.622983870967742,0.43161094224924,0.717948717948718,0.408045977011494,0.458064516129032,0.739130434782609,0.697947214076246
+lights vs salary,Decision Tree,Features level,no sampling,0.639112903225807,0.292490118577075,0.757780784844384,0.377551020408163,0.238709677419355,0.703517587939699,0.821114369501466
+lights vs salary,Decision Tree,Features level,down,0.564516129032258,0.440414507772021,0.643564356435644,0.367965367965368,0.548387096774194,0.735849056603774,0.571847507331378
+lights vs salary,Decision Tree,Features level,up,0.596774193548387,0.428571428571429,0.688473520249221,0.384615384615385,0.483870967741936,0.73421926910299,0.648093841642229
+lights vs salary,Decision Tree,Features level,smote,0.63508064516129,0.449848024316109,0.726998491704374,0.425287356321839,0.47741935483871,0.748447204968944,0.706744868035191
+lights vs salary,Gradient Boosting,Features level,no sampling,0.681451612903226,0.0481927710843373,0.808716707021792,0.363636363636364,0.0258064516129032,0.688659793814433,0.979472140762463
+lights vs salary,Gradient Boosting,Features level,down,0.592741935483871,0.465608465608466,0.671009771986971,0.394618834080717,0.567741935483871,0.754578754578755,0.604105571847507
+lights vs salary,Gradient Boosting,Features level,up,0.643145161290323,0.427184466019417,0.740849194729136,0.428571428571429,0.425806451612903,0.739766081871345,0.741935483870968
+lights vs salary,Gradient Boosting,Features level,smote,0.625,0.449704142011834,0.715596330275229,0.415300546448087,0.490322580645161,0.747603833865815,0.686217008797654
+Images basic features vs salary,logistic ridge regression,Features standardised,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic ridge regression,Features standardised,down,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic ridge regression,Features standardised,up,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic ridge regression,Features standardised,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic lasso regression,Features standardised,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic lasso regression,Features standardised,down,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic lasso regression,Features standardised,up,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic lasso regression,Features standardised,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic ridge regression,Features level,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic ridge regression,Features level,down,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic ridge regression,Features level,up,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic ridge regression,Features level,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic lasso regression,Features level,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic lasso regression,Features level,down,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic lasso regression,Features level,up,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,logistic lasso regression,Features level,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Images basic features vs salary,Decision Tree,Features standardised,no sampling,0.629032258064516,0.220338983050848,0.756613756613757,0.320987654320988,0.167741935483871,0.689156626506024,0.838709677419355
+Images basic features vs salary,Decision Tree,Features standardised,down,0.526209677419355,0.395886889460154,0.61028192371476,0.329059829059829,0.496774193548387,0.702290076335878,0.539589442815249
+Images basic features vs salary,Decision Tree,Features standardised,up,0.556451612903226,0.364161849710983,0.659442724458204,0.329842931937173,0.406451612903226,0.698360655737705,0.624633431085044
+Images basic features vs salary,Decision Tree,Features standardised,smote,0.548387096774194,0.36,0.651090342679128,0.323076923076923,0.406451612903226,0.694352159468439,0.612903225806452
+Images basic features vs salary,Gradient Boosting,Features standardised,no sampling,0.685483870967742,0.0823529411764706,0.81021897810219,0.466666666666667,0.0451612903225806,0.692307692307692,0.976539589442815
+Images basic features vs salary,Gradient Boosting,Features standardised,down,0.570564516129032,0.476658476658477,0.635897435897436,0.384920634920635,0.625806451612903,0.762295081967213,0.545454545454545
+Images basic features vs salary,Gradient Boosting,Features standardised,up,0.625,0.345070422535211,0.73728813559322,0.37984496124031,0.316129032258065,0.711171662125341,0.765395894428153
+Images basic features vs salary,Gradient Boosting,Features standardised,smote,0.625,0.36734693877551,0.73352435530086,0.388489208633094,0.348387096774194,0.717086834733894,0.750733137829912
+Images basic features vs salary,Decision Tree,Features level,no sampling,0.629032258064516,0.220338983050848,0.756613756613757,0.320987654320988,0.167741935483871,0.689156626506024,0.838709677419355
+Images basic features vs salary,Decision Tree,Features level,down,0.51008064516129,0.441379310344828,0.563734290843806,0.342857142857143,0.619354838709677,0.726851851851852,0.460410557184751
+Images basic features vs salary,Decision Tree,Features level,up,0.538306451612903,0.340057636887608,0.644961240310078,0.307291666666667,0.380645161290323,0.68421052631579,0.609970674486804
+Images basic features vs salary,Decision Tree,Features level,smote,0.566532258064516,0.394366197183099,0.662480376766091,0.35,0.451612903225806,0.712837837837838,0.618768328445748
+Images basic features vs salary,Gradient Boosting,Features level,no sampling,0.683467741935484,0.0710059171597633,0.809234507897934,0.428571428571429,0.0387096774193548,0.690871369294606,0.976539589442815
+Images basic features vs salary,Gradient Boosting,Features level,down,0.57258064516129,0.445026178010471,0.652459016393443,0.374449339207049,0.548387096774194,0.739776951672863,0.583577712609971
+Images basic features vs salary,Gradient Boosting,Features level,up,0.616935483870968,0.409937888198758,0.716417910447761,0.395209580838323,0.425806451612903,0.729483282674772,0.703812316715543
+Images basic features vs salary,Gradient Boosting,Features level,smote,0.610887096774194,0.423880597014925,0.706240487062405,0.394444444444444,0.458064516129032,0.734177215189873,0.680351906158358
+Images VGG vs salary,logistic ridge regression with pca,Features standardised,no sampling,0.685483870967742,0.0126582278481013,0.81294964028777,0.333333333333333,0.00645161290322581,0.68762677484787,0.994134897360704
+Images VGG vs salary,logistic ridge regression with pca,Features standardised,down,0.689516129032258,0.0128205128205128,0.81578947368421,1,0.00645161290322581,0.688888888888889,1
+Images VGG vs salary,logistic ridge regression with pca,Features standardised,up,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,logistic ridge regression with pca,Features standardised,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,logistic lasso regression without pca,Features standardised,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,logistic lasso regression without pca,Features standardised,down,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,logistic lasso regression without pca,Features standardised,up,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,logistic lasso regression without pca,Features standardised,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,logistic ridge regression with pca,Features level,no sampling,0.67741935483871,0.0123456790123457,0.807228915662651,0.142857142857143,0.00645161290322581,0.685071574642127,0.982404692082111
+Images VGG vs salary,logistic ridge regression with pca,Features level,down,0.639112903225807,0.197309417040359,0.767230169050715,0.323529411764706,0.141935483870968,0.689252336448598,0.865102639296188
+Images VGG vs salary,logistic ridge regression with pca,Features level,up,0.643145161290323,0.253164556962025,0.765562913907285,0.365853658536585,0.193548387096774,0.698067632850242,0.847507331378299
+Images VGG vs salary,logistic ridge regression with pca,Features level,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,logistic lasso regression without pca,Features level,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,logistic lasso regression without pca,Features level,down,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,logistic lasso regression without pca,Features level,up,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,logistic lasso regression without pca,Features level,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Images VGG vs salary,Decision Tree,Features standardised,no sampling,0.673387096774194,0.0240963855421687,0.803874092009685,0.181818181818182,0.0129032258064516,0.684536082474227,0.973607038123167
+Images VGG vs salary,Decision Tree,Features standardised,down,0.516129032258065,0.452054794520548,0.566787003610108,0.34982332155477,0.638709677419355,0.737089201877934,0.460410557184751
+Images VGG vs salary,Decision Tree,Features standardised,up,0.542338709677419,0.453012048192771,0.606585788561525,0.361538461538462,0.606451612903226,0.741525423728814,0.513196480938416
+Images VGG vs salary,Decision Tree,Features standardised,smote,0.560483870967742,0.417112299465241,0.647249190938512,0.356164383561644,0.503225806451613,0.72202166064982,0.586510263929619
+Images VGG vs salary,Gradient Boosting,Features standardised,no sampling,0.669354838709677,0.240740740740741,0.788659793814433,0.426229508196721,0.167741935483871,0.703448275862069,0.897360703812317
+Images VGG vs salary,Gradient Boosting,Features standardised,down,0.610887096774194,0.506393861892583,0.678868552412646,0.419491525423729,0.638709677419355,0.784615384615385,0.598240469208211
+Images VGG vs salary,Gradient Boosting,Features standardised,up,0.671370967741936,0.43205574912892,0.768794326241135,0.46969696969697,0.4,0.744505494505495,0.794721407624633
+Images VGG vs salary,Gradient Boosting,Features standardised,smote,0.647177419354839,0.512534818941504,0.723538704581359,0.450980392156863,0.593548387096774,0.784246575342466,0.671554252199413
+Images VGG vs salary,Decision Tree,Features level,no sampling,0.673387096774194,0.0240963855421687,0.803874092009685,0.181818181818182,0.0129032258064516,0.684536082474227,0.973607038123167
+Images VGG vs salary,Decision Tree,Features level,down,0.506048387096774,0.451901565995526,0.55045871559633,0.345890410958904,0.651612903225806,0.735294117647059,0.439882697947214
+Images VGG vs salary,Decision Tree,Features level,up,0.51008064516129,0.390977443609023,0.590219224283305,0.319672131147541,0.503225806451613,0.694444444444445,0.513196480938416
+Images VGG vs salary,Decision Tree,Features level,smote,0.608870967741936,0.442528735632184,0.698757763975155,0.398963730569948,0.496774193548387,0.742574257425743,0.659824046920821
+Images VGG vs salary,Gradient Boosting,Features level,no sampling,0.6875,0.37246963562753,0.791946308724832,0.5,0.296774193548387,0.73019801980198,0.865102639296188
+Images VGG vs salary,Gradient Boosting,Features level,down,0.600806451612903,0.521739130434783,0.657439446366782,0.416988416988417,0.696774193548387,0.80168776371308,0.557184750733138
+Images VGG vs salary,Gradient Boosting,Features level,up,0.679435483870968,0.43010752688172,0.776998597475456,0.483870967741936,0.387096774193548,0.744623655913979,0.812316715542522
+Images VGG vs salary,Gradient Boosting,Features level,smote,0.633064516129032,0.513368983957219,0.705501618122977,0.438356164383562,0.619354838709677,0.787003610108303,0.639296187683284
+Transfer learning vs salary,logistic ridge regression with pca,Features standardised,no sampling,0.685483870967742,,0.813397129186603,0,0,0.686868686868687,0.997067448680352
+Transfer learning vs salary,logistic ridge regression with pca,Features standardised,down,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic ridge regression with pca,Features standardised,up,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic ridge regression with pca,Features standardised,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic lasso regression without pca,Features standardised,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic lasso regression without pca,Features standardised,down,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic lasso regression without pca,Features standardised,up,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic lasso regression without pca,Features standardised,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic ridge regression with pca,Features level,no sampling,0.681451612903226,0.0481927710843373,0.808716707021792,0.363636363636364,0.0258064516129032,0.688659793814433,0.979472140762463
+Transfer learning vs salary,logistic ridge regression with pca,Features level,down,0.669354838709677,0.188118811881188,0.792405063291139,0.404255319148936,0.12258064516129,0.697104677060134,0.917888563049853
+Transfer learning vs salary,logistic ridge regression with pca,Features level,up,0.67741935483871,0.223300970873786,0.796437659033079,0.450980392156863,0.148387096774194,0.703370786516854,0.917888563049853
+Transfer learning vs salary,logistic ridge regression with pca,Features level,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic lasso regression without pca,Features level,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic lasso regression without pca,Features level,down,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic lasso regression without pca,Features level,up,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,logistic lasso regression without pca,Features level,smote,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,Decision Tree,Features standardised,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,Decision Tree,Features standardised,down,0.522177419354839,0.450116009280742,0.577540106951872,0.351449275362319,0.625806451612903,0.736363636363636,0.475073313782991
+Transfer learning vs salary,Decision Tree,Features standardised,up,0.540322580645161,0.441176470588235,0.60958904109589,0.355731225296443,0.580645161290323,0.732510288065844,0.521994134897361
+Transfer learning vs salary,Decision Tree,Features standardised,smote,0.566532258064516,0.354354354354354,0.673748103186646,0.331460674157303,0.380645161290323,0.69811320754717,0.651026392961877
+Transfer learning vs salary,Gradient Boosting,Features standardised,no sampling,0.667338709677419,0.357976653696498,0.775510204081633,0.450980392156863,0.296774193548387,0.723350253807107,0.835777126099707
+Transfer learning vs salary,Gradient Boosting,Features standardised,down,0.602822580645161,0.508728179551122,0.666666666666667,0.414634146341463,0.658064516129032,0.788,0.577712609970675
+Transfer learning vs salary,Gradient Boosting,Features standardised,up,0.681451612903226,0.41044776119403,0.781767955801105,0.486725663716814,0.354838709677419,0.738903394255875,0.829912023460411
+Transfer learning vs salary,Gradient Boosting,Features standardised,smote,0.655241935483871,0.48955223880597,0.73972602739726,0.455555555555556,0.529032258064516,0.768987341772152,0.712609970674487
+Transfer learning vs salary,Decision Tree,Features level,no sampling,0.6875,,0.814814814814815,,0,0.6875,1
+Transfer learning vs salary,Decision Tree,Features level,down,0.465725806451613,0.43254817987152,0.495238095238095,0.323717948717949,0.651612903225806,0.706521739130435,0.381231671554252
+Transfer learning vs salary,Decision Tree,Features level,up,0.566532258064516,0.489311163895487,0.623467600700525,0.387218045112782,0.664516129032258,0.773913043478261,0.521994134897361
+Transfer learning vs salary,Decision Tree,Features level,smote,0.604838709677419,0.350993377483444,0.715942028985507,0.360544217687075,0.341935483870968,0.707736389684814,0.724340175953079
+Transfer learning vs salary,Gradient Boosting,Features level,no sampling,0.673387096774194,0.313559322033898,0.785714285714286,0.45679012345679,0.238709677419355,0.71566265060241,0.870967741935484
+Transfer learning vs salary,Gradient Boosting,Features level,down,0.616935483870968,0.512820512820513,0.684385382059801,0.425531914893617,0.645161290322581,0.789272030651341,0.604105571847507
+Transfer learning vs salary,Gradient Boosting,Features level,up,0.67741935483871,0.411764705882353,0.777777777777778,0.478632478632479,0.361290322580645,0.738786279683377,0.821114369501466
+Transfer learning vs salary,Gradient Boosting,Features level,smote,0.663306451612903,0.495468277945619,0.747352496217852,0.465909090909091,0.529032258064516,0.771875,0.724340175953079
+lights vs average income,logistic ridge regression,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic ridge regression,Features standardised,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic ridge regression,Features standardised,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic ridge regression,Features standardised,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic lasso regression,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic lasso regression,Features standardised,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic lasso regression,Features standardised,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic lasso regression,Features standardised,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic ridge regression,Features level,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic ridge regression,Features level,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic ridge regression,Features level,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic ridge regression,Features level,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic lasso regression,Features level,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic lasso regression,Features level,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic lasso regression,Features level,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,logistic lasso regression,Features level,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+lights vs average income,Decision Tree,Features standardised,no sampling,0.909274193548387,,0.952481520591341,0,0,0.931818181818182,0.974082073434125
+lights vs average income,Decision Tree,Features standardised,down,0.645161290322581,0.234782608695652,0.769028871391076,0.137055837563452,0.818181818181818,0.979933110367893,0.632829373650108
+lights vs average income,Decision Tree,Features standardised,up,0.826612903225806,0.173076923076923,0.903153153153153,0.126760563380282,0.272727272727273,0.943529411764706,0.866090712742981
+lights vs average income,Decision Tree,Features standardised,smote,0.681451612903226,0.177083333333333,0.8025,0.106918238993711,0.515151515151515,0.952522255192878,0.693304535637149
+lights vs average income,Gradient Boosting,Features standardised,no sampling,0.933467741935484,0.0571428571428571,0.96551724137931,0.5,0.0303030303030303,0.935222672064777,0.997840172786177
+lights vs average income,Gradient Boosting,Features standardised,down,0.695564516129032,0.225641025641026,0.810539523212045,0.135802469135802,0.666666666666667,0.967065868263473,0.697624190064795
+lights vs average income,Gradient Boosting,Features standardised,up,0.911290322580645,0.214285714285714,0.952991452991453,0.260869565217391,0.181818181818182,0.94291754756871,0.963282937365011
+lights vs average income,Gradient Boosting,Features standardised,smote,0.75,0.270588235294118,0.849148418491484,0.167883211678832,0.696969696969697,0.972144846796657,0.75377969762419
+lights vs average income,Decision Tree,Features level,no sampling,0.909274193548387,,0.952481520591341,0,0,0.931818181818182,0.974082073434125
+lights vs average income,Decision Tree,Features level,down,0.629032258064516,0.226890756302521,0.755968169761273,0.131707317073171,0.818181818181818,0.979381443298969,0.615550755939525
+lights vs average income,Decision Tree,Features level,up,0.830645161290323,0.176470588235294,0.90561797752809,0.130434782608696,0.272727272727273,0.943793911007026,0.870410367170626
+lights vs average income,Decision Tree,Features level,smote,0.705645161290323,0.188888888888889,0.820197044334975,0.115646258503401,0.515151515151515,0.954154727793696,0.719222462203024
+lights vs average income,Gradient Boosting,Features level,no sampling,0.9375,0.162162162162162,0.967539267015707,0.75,0.0909090909090909,0.939024390243902,0.997840172786177
+lights vs average income,Gradient Boosting,Features level,down,0.701612903225807,0.252525252525253,0.81360201511335,0.151515151515152,0.757575757575758,0.97583081570997,0.697624190064795
+lights vs average income,Gradient Boosting,Features level,up,0.911290322580645,0.185185185185185,0.953091684434968,0.238095238095238,0.151515151515152,0.941052631578947,0.965442764578834
+lights vs average income,Gradient Boosting,Features level,smote,0.745967741935484,0.25,0.847087378640777,0.155555555555556,0.636363636363636,0.966759002770083,0.75377969762419
+Images basic features vs average income,logistic ridge regression,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic ridge regression,Features standardised,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic ridge regression,Features standardised,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic ridge regression,Features standardised,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic lasso regression,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic lasso regression,Features standardised,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic lasso regression,Features standardised,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic lasso regression,Features standardised,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic ridge regression,Features level,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic ridge regression,Features level,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic ridge regression,Features level,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic ridge regression,Features level,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic lasso regression,Features level,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic lasso regression,Features level,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic lasso regression,Features level,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,logistic lasso regression,Features level,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,Decision Tree,Features standardised,no sampling,0.919354838709677,,0.957983193277311,0,0,0.932515337423313,0.98488120950324
+Images basic features vs average income,Decision Tree,Features standardised,down,0.495967741935484,0.131944444444444,0.644886363636364,0.0745098039215686,0.575757575757576,0.941908713692946,0.490280777537797
+Images basic features vs average income,Decision Tree,Features standardised,up,0.816532258064516,0.116504854368932,0.897637795275591,0.0857142857142857,0.181818181818182,0.936619718309859,0.861771058315335
+Images basic features vs average income,Decision Tree,Features standardised,smote,0.69758064516129,0.0963855421686747,0.818401937046005,0.0601503759398496,0.242424242424242,0.931129476584022,0.730021598272138
+Images basic features vs average income,Gradient Boosting,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,Gradient Boosting,Features standardised,down,0.622983870967742,0.168888888888889,0.75619295958279,0.0989583333333333,0.575757575757576,0.953947368421053,0.626349892008639
+Images basic features vs average income,Gradient Boosting,Features standardised,up,0.917338709677419,0.163265306122449,0.956521739130435,0.25,0.121212121212121,0.939583333333333,0.974082073434125
+Images basic features vs average income,Gradient Boosting,Features standardised,smote,0.810483870967742,0.253968253968254,0.891454965357968,0.172043010752688,0.484848484848485,0.957816377171216,0.833693304535637
+Images basic features vs average income,Decision Tree,Features level,no sampling,0.919354838709677,,0.957983193277311,0,0,0.932515337423313,0.98488120950324
+Images basic features vs average income,Decision Tree,Features level,down,0.558467741935484,0.120481927710843,0.705248990578735,0.0694444444444445,0.454545454545455,0.935714285714286,0.565874730021598
+Images basic features vs average income,Decision Tree,Features level,up,0.824596774193548,0.0645161290322581,0.903225806451613,0.05,0.0909090909090909,0.931192660550459,0.876889848812095
+Images basic features vs average income,Decision Tree,Features level,smote,0.719758064516129,0.167664670658683,0.831515151515152,0.104477611940299,0.424242424242424,0.947513812154696,0.740820734341253
+Images basic features vs average income,Gradient Boosting,Features level,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images basic features vs average income,Gradient Boosting,Features level,down,0.612903225806452,0.17948717948718,0.746701846965699,0.104477611940299,0.636363636363636,0.959322033898305,0.611231101511879
+Images basic features vs average income,Gradient Boosting,Features level,up,0.919354838709677,0.166666666666667,0.957627118644068,0.266666666666667,0.121212121212121,0.93970893970894,0.976241900647948
+Images basic features vs average income,Gradient Boosting,Features level,smote,0.806451612903226,0.2,0.889908256880734,0.137931034482759,0.363636363636364,0.948655256723716,0.838012958963283
+Transfer learning vs average income,logistic ridge regression with pca,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic ridge regression with pca,Features standardised,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic ridge regression with pca,Features standardised,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic ridge regression with pca,Features standardised,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic lasso regression without pca,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic lasso regression without pca,Features standardised,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic lasso regression without pca,Features standardised,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic lasso regression without pca,Features standardised,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic ridge regression with pca,Features level,no sampling,0.933467741935484,0.0571428571428571,0.96551724137931,0.5,0.0303030303030303,0.935222672064777,0.997840172786177
+Transfer learning vs average income,logistic ridge regression with pca,Features level,down,0.933467741935484,0.0571428571428571,0.96551724137931,0.5,0.0303030303030303,0.935222672064777,0.997840172786177
+Transfer learning vs average income,logistic ridge regression with pca,Features level,up,0.935483870967742,0.0588235294117647,0.966597077244259,1,0.0303030303030303,0.935353535353535,1
+Transfer learning vs average income,logistic ridge regression with pca,Features level,smote,0.933467741935484,0.0571428571428571,0.96551724137931,0.5,0.0303030303030303,0.935222672064777,0.997840172786177
+Transfer learning vs average income,logistic lasso regression without pca,Features level,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic lasso regression without pca,Features level,down,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic lasso regression without pca,Features level,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,logistic lasso regression without pca,Features level,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,Decision Tree,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,Decision Tree,Features standardised,down,0.61491935483871,0.232931726907631,0.742934051144011,0.134259259259259,0.878787878787879,0.985714285714286,0.596112311015119
+Transfer learning vs average income,Decision Tree,Features standardised,up,0.745967741935484,0.181818181818182,0.84964200477327,0.115702479338843,0.424242424242424,0.949333333333333,0.76889848812095
+Transfer learning vs average income,Decision Tree,Features standardised,smote,0.752016129032258,0.163265306122449,0.854437869822485,0.105263157894737,0.363636363636364,0.945026178010471,0.779697624190065
+Transfer learning vs average income,Gradient Boosting,Features standardised,no sampling,0.933467741935484,0.153846153846154,0.965372507869885,0.5,0.0909090909090909,0.938775510204082,0.993520518358531
+Transfer learning vs average income,Gradient Boosting,Features standardised,down,0.707661290322581,0.256410256410256,0.818067754077792,0.154320987654321,0.757575757575758,0.976047904191617,0.704103671706264
+Transfer learning vs average income,Gradient Boosting,Features standardised,up,0.92741935483871,0.1,0.96218487394958,0.285714285714286,0.0606060606060606,0.936605316973415,0.989200863930886
+Transfer learning vs average income,Gradient Boosting,Features standardised,smote,0.840725806451613,0.288288288288288,0.910329171396141,0.205128205128205,0.484848484848485,0.95933014354067,0.866090712742981
+Transfer learning vs average income,Decision Tree,Features level,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Transfer learning vs average income,Decision Tree,Features level,down,0.675403225806452,0.214634146341463,0.795425667090216,0.127906976744186,0.666666666666667,0.966049382716049,0.676025917926566
+Transfer learning vs average income,Decision Tree,Features level,up,0.788306451612903,0.222222222222222,0.877479579929988,0.147058823529412,0.454545454545455,0.954314720812183,0.812095032397408
+Transfer learning vs average income,Decision Tree,Features level,smote,0.752016129032258,0.236024844720497,0.851985559566787,0.1484375,0.575757575757576,0.96195652173913,0.764578833693305
+Transfer learning vs average income,Gradient Boosting,Features level,no sampling,0.929435483870968,0.102564102564103,0.963273871983211,0.333333333333333,0.0606060606060606,0.936734693877551,0.991360691144708
+Transfer learning vs average income,Gradient Boosting,Features level,down,0.705645161290323,0.255102040816327,0.816582914572864,0.153374233128834,0.757575757575758,0.975975975975976,0.701943844492441
+Transfer learning vs average income,Gradient Boosting,Features level,up,0.929435483870968,0.146341463414634,0.963196635120925,0.375,0.0909090909090909,0.938524590163934,0.989200863930886
+Transfer learning vs average income,Gradient Boosting,Features level,smote,0.840725806451613,0.275229357798165,0.910532276330691,0.197368421052632,0.454545454545455,0.957142857142857,0.868250539956804
+lights vs median income,logistic ridge regression,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic ridge regression,Features standardised,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic ridge regression,Features standardised,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic ridge regression,Features standardised,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic lasso regression,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic lasso regression,Features standardised,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic lasso regression,Features standardised,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic lasso regression,Features standardised,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic ridge regression,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic ridge regression,Features level,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic ridge regression,Features level,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic ridge regression,Features level,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic lasso regression,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic lasso regression,Features level,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic lasso regression,Features level,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,logistic lasso regression,Features level,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,Decision Tree,Features standardised,no sampling,0.931451612903226,,0.964509394572025,0,0,0.935222672064777,0.995689655172414
+lights vs median income,Decision Tree,Features standardised,down,0.618951612903226,0.240963855421687,0.745625841184388,0.138248847926267,0.9375,0.992831541218638,0.59698275862069
+lights vs median income,Decision Tree,Features standardised,up,0.848790322580645,0.242424242424242,0.916013437849944,0.17910447761194,0.375,0.953379953379953,0.881465517241379
+lights vs median income,Decision Tree,Features standardised,smote,0.745967741935484,0.222222222222222,0.848192771084337,0.138461538461538,0.5625,0.961748633879781,0.758620689655172
+lights vs median income,Gradient Boosting,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,Gradient Boosting,Features standardised,down,0.703629032258065,0.230366492146597,0.816479400749064,0.138364779874214,0.6875,0.970326409495549,0.704741379310345
+lights vs median income,Gradient Boosting,Features standardised,up,0.915322580645161,0.192307692307692,0.95531914893617,0.25,0.15625,0.94327731092437,0.967672413793103
+lights vs median income,Gradient Boosting,Features standardised,smote,0.768145161290323,0.248366013071895,0.862932061978546,0.15702479338843,0.59375,0.965333333333333,0.780172413793103
+lights vs median income,Decision Tree,Features level,no sampling,0.931451612903226,,0.964509394572025,0,0,0.935222672064777,0.995689655172414
+lights vs median income,Decision Tree,Features level,down,0.641129032258065,0.219298245614035,0.767015706806283,0.127551020408163,0.78125,0.976666666666667,0.631465517241379
+lights vs median income,Decision Tree,Features level,up,0.844758064516129,0.252427184466019,0.913385826771654,0.183098591549296,0.40625,0.955294117647059,0.875
+lights vs median income,Decision Tree,Features level,smote,0.745967741935484,0.181818181818182,0.84964200477327,0.114754098360656,0.4375,0.951871657754011,0.767241379310345
+lights vs median income,Gradient Boosting,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+lights vs median income,Gradient Boosting,Features level,down,0.713709677419355,0.228260869565217,0.824257425742574,0.138157894736842,0.65625,0.968023255813953,0.717672413793103
+lights vs median income,Gradient Boosting,Features level,up,0.919354838709677,0.2,0.957537154989384,0.277777777777778,0.15625,0.943514644351465,0.97198275862069
+lights vs median income,Gradient Boosting,Features level,smote,0.772177419354839,0.251655629139073,0.86563614744352,0.159663865546218,0.59375,0.96551724137931,0.78448275862069
+Images basic features vs median income,logistic ridge regression,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic ridge regression,Features standardised,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic ridge regression,Features standardised,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic ridge regression,Features standardised,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic lasso regression,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic lasso regression,Features standardised,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic lasso regression,Features standardised,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic lasso regression,Features standardised,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic ridge regression,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic ridge regression,Features level,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic ridge regression,Features level,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic ridge regression,Features level,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic lasso regression,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic lasso regression,Features level,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic lasso regression,Features level,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,logistic lasso regression,Features level,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,Decision Tree,Features standardised,no sampling,0.919354838709677,0.0476190476190476,0.957894736842105,0.1,0.03125,0.936213991769547,0.980603448275862
+Images basic features vs median income,Decision Tree,Features standardised,down,0.604838709677419,0.132743362831858,0.744125326370757,0.077319587628866,0.46875,0.943708609271523,0.614224137931035
+Images basic features vs median income,Decision Tree,Features standardised,up,0.810483870967742,0.06,0.894618834080718,0.0441176470588235,0.09375,0.932242990654206,0.859913793103448
+Images basic features vs median income,Decision Tree,Features standardised,smote,0.709677419354839,0.132530120481928,0.825665859564165,0.082089552238806,0.34375,0.941988950276243,0.734913793103448
+Images basic features vs median income,Gradient Boosting,Features standardised,no sampling,0.935483870967742,0.0588235294117647,0.966597077244259,0.5,0.03125,0.937246963562753,0.997844827586207
+Images basic features vs median income,Gradient Boosting,Features standardised,down,0.657258064516129,0.174757281553398,0.783715012722646,0.103448275862069,0.5625,0.956521739130435,0.663793103448276
+Images basic features vs median income,Gradient Boosting,Features standardised,up,0.925403225806452,0.177777777777778,0.960929250263992,0.307692307692308,0.125,0.942028985507246,0.980603448275862
+Images basic features vs median income,Gradient Boosting,Features standardised,smote,0.82258064516129,0.228070175438597,0.899772209567198,0.158536585365854,0.40625,0.954106280193237,0.851293103448276
+Images basic features vs median income,Decision Tree,Features level,no sampling,0.919354838709677,0.0476190476190476,0.957894736842105,0.1,0.03125,0.936213991769547,0.980603448275862
+Images basic features vs median income,Decision Tree,Features level,down,0.57258064516129,0.131147540983607,0.716577540106952,0.0754716981132076,0.5,0.943661971830986,0.577586206896552
+Images basic features vs median income,Decision Tree,Features level,up,0.836693548387097,0.0470588235294118,0.910694597574421,0.0377358490566038,0.0625,0.932279909706546,0.890086206896552
+Images basic features vs median income,Decision Tree,Features level,smote,0.701612903225807,0.149425287356322,0.819070904645477,0.0915492957746479,0.40625,0.946327683615819,0.72198275862069
+Images basic features vs median income,Gradient Boosting,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images basic features vs median income,Gradient Boosting,Features level,down,0.653225806451613,0.188679245283019,0.77948717948718,0.111111111111111,0.625,0.962025316455696,0.655172413793103
+Images basic features vs median income,Gradient Boosting,Features level,up,0.923387096774194,0.05,0.960084033613445,0.125,0.03125,0.936475409836066,0.984913793103448
+Images basic features vs median income,Gradient Boosting,Features level,smote,0.830645161290323,0.25,0.904545454545454,0.175,0.4375,0.956730769230769,0.857758620689655
+Images VGG vs median income,logistic ridge regression with pca,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic ridge regression with pca,Features standardised,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic ridge regression with pca,Features standardised,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic ridge regression with pca,Features standardised,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic lasso regression without pca,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic lasso regression without pca,Features standardised,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic lasso regression without pca,Features standardised,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic lasso regression without pca,Features standardised,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic ridge regression with pca,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic ridge regression with pca,Features level,down,0.931451612903226,,0.964509394572025,0,0,0.935222672064777,0.995689655172414
+Images VGG vs median income,logistic ridge regression with pca,Features level,up,0.921370967741936,0.0930232558139535,0.958904109589041,0.181818181818182,0.0625,0.938144329896907,0.980603448275862
+Images VGG vs median income,logistic ridge regression with pca,Features level,smote,0.9375,0.0606060606060606,0.967674661105318,1,0.03125,0.937373737373737,1
+Images VGG vs median income,logistic lasso regression without pca,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic lasso regression without pca,Features level,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic lasso regression without pca,Features level,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,logistic lasso regression without pca,Features level,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,Decision Tree,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,Decision Tree,Features standardised,down,0.639013452914798,0.206896551724138,0.766328011611031,0.120689655172414,0.724137931034483,0.970588235294118,0.633093525179856
+Images VGG vs median income,Decision Tree,Features standardised,up,0.877016129032258,0.0895522388059701,0.934054054054054,0.0857142857142857,0.09375,0.937093275488069,0.931034482758621
+Images VGG vs median income,Decision Tree,Features standardised,smote,0.780241935483871,0.215827338129496,0.87221570926143,0.14018691588785,0.46875,0.956298200514139,0.801724137931035
+Images VGG vs median income,Gradient Boosting,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,Gradient Boosting,Features standardised,down,0.69758064516129,0.21875,0.8125,0.13125,0.65625,0.967261904761905,0.700431034482759
+Images VGG vs median income,Gradient Boosting,Features standardised,up,0.9375,0.0606060606060606,0.967674661105318,1,0.03125,0.937373737373737,1
+Images VGG vs median income,Gradient Boosting,Features standardised,smote,0.836693548387097,0.242990654205607,0.908474576271187,0.173333333333333,0.40625,0.954869358669834,0.866379310344828
+Images VGG vs median income,Decision Tree,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Images VGG vs median income,Decision Tree,Features level,down,0.604838709677419,0.169491525423729,0.740740740740741,0.0980392156862745,0.625,0.958904109589041,0.603448275862069
+Images VGG vs median income,Decision Tree,Features level,up,0.858870967741936,0.0540540540540541,0.923747276688453,0.0476190476190476,0.0625,0.933920704845815,0.913793103448276
+Images VGG vs median income,Decision Tree,Features level,smote,0.723790322580645,0.198830409356725,0.833130328867235,0.122302158273381,0.53125,0.957983193277311,0.737068965517241
+Images VGG vs median income,Gradient Boosting,Features level,no sampling,0.935483870967742,0.0588235294117647,0.966597077244259,0.5,0.03125,0.937246963562753,0.997844827586207
+Images VGG vs median income,Gradient Boosting,Features level,down,0.69758064516129,0.21875,0.8125,0.13125,0.65625,0.967261904761905,0.700431034482759
+Images VGG vs median income,Gradient Boosting,Features level,up,0.9375,0.0606060606060606,0.967674661105318,1,0.03125,0.937373737373737,1
+Images VGG vs median income,Gradient Boosting,Features level,smote,0.848790322580645,0.22680412371134,0.916201117318436,0.169230769230769,0.34375,0.951276102088167,0.883620689655172
+Transfer learning vs median income,logistic ridge regression with pca,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic ridge regression with pca,Features standardised,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic ridge regression with pca,Features standardised,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic ridge regression with pca,Features standardised,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic lasso regression without pca,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic lasso regression without pca,Features standardised,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic lasso regression without pca,Features standardised,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic lasso regression without pca,Features standardised,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic ridge regression with pca,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic ridge regression with pca,Features level,down,0.933467741935484,,0.965589155370177,0,0,0.935353535353535,0.997844827586207
+Transfer learning vs median income,logistic ridge regression with pca,Features level,up,0.933467741935484,,0.965589155370177,0,0,0.935353535353535,0.997844827586207
+Transfer learning vs median income,logistic ridge regression with pca,Features level,smote,0.933467741935484,,0.965589155370177,0,0,0.935353535353535,0.997844827586207
+Transfer learning vs median income,logistic lasso regression without pca,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic lasso regression without pca,Features level,down,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic lasso regression without pca,Features level,up,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,logistic lasso regression without pca,Features level,smote,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,Decision Tree,Features standardised,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,Decision Tree,Features standardised,down,0.645161290322581,0.207207207207207,0.771428571428571,0.121052631578947,0.71875,0.970588235294118,0.640086206896552
+Transfer learning vs median income,Decision Tree,Features standardised,up,0.856854838709677,0.164705882352941,0.921719955898567,0.132075471698113,0.21875,0.943566591422122,0.900862068965517
+Transfer learning vs median income,Decision Tree,Features standardised,smote,0.725806451612903,0.170731707317073,0.835748792270531,0.106060606060606,0.4375,0.950549450549451,0.745689655172414
+Transfer learning vs median income,Gradient Boosting,Features standardised,no sampling,0.935483870967742,0.111111111111111,0.96652719665272,0.5,0.0625,0.939024390243902,0.995689655172414
+Transfer learning vs median income,Gradient Boosting,Features standardised,down,0.689516129032258,0.23,0.805555555555556,0.136904761904762,0.71875,0.972560975609756,0.6875
+Transfer learning vs median income,Gradient Boosting,Features standardised,up,0.935483870967742,0.0588235294117647,0.966597077244259,0.5,0.03125,0.937246963562753,0.997844827586207
+Transfer learning vs median income,Gradient Boosting,Features standardised,smote,0.844758064516129,0.306306306306306,0.912599318955732,0.215189873417722,0.53125,0.964028776978417,0.866379310344828
+Transfer learning vs median income,Decision Tree,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,Decision Tree,Features level,down,0.703629032258065,0.222222222222222,0.816936488169365,0.133757961783439,0.65625,0.967551622418879,0.706896551724138
+Transfer learning vs median income,Decision Tree,Features level,up,0.860887096774194,0.148148148148148,0.924259055982437,0.122448979591837,0.1875,0.941834451901566,0.907327586206897
+Transfer learning vs median income,Decision Tree,Features level,smote,0.735887096774194,0.215568862275449,0.841212121212121,0.133333333333333,0.5625,0.961218836565097,0.747844827586207
+Transfer learning vs median income,Gradient Boosting,Features level,no sampling,0.935483870967742,,0.966666666666667,,0,0.935483870967742,1
+Transfer learning vs median income,Gradient Boosting,Features level,down,0.689516129032258,0.180851063829787,0.808457711442786,0.108974358974359,0.53125,0.955882352941176,0.700431034482759
+Transfer learning vs median income,Gradient Boosting,Features level,up,0.931451612903226,0.105263157894737,0.964360587002096,0.333333333333333,0.0625,0.938775510204082,0.991379310344828
+Transfer learning vs median income,Gradient Boosting,Features level,smote,0.834677419354839,0.267857142857143,0.906818181818182,0.1875,0.46875,0.959134615384615,0.859913793103448
+lights vs water,logistic ridge regression,Features standardised,no sampling,0.743362831858407,0.815286624203822,0.579710144927536,0.705234159779614,0.966037735849057,0.898876404494382,0.427807486631016
+lights vs water,logistic ridge regression,Features standardised,down,0.688053097345133,0.786039453717754,0.424489795918367,0.657360406091371,0.977358490566038,0.896551724137931,0.27807486631016
+lights vs water,logistic ridge regression,Features standardised,up,0.674778761061947,0.779610194902549,0.379746835443038,0.646766169154229,0.981132075471698,0.9,0.240641711229947
+lights vs water,logistic ridge regression,Features standardised,smote,0.741150442477876,0.813990461049285,0.574545454545454,0.703296703296703,0.966037735849057,0.897727272727273,0.422459893048128
+lights vs water,logistic lasso regression,Features standardised,no sampling,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+lights vs water,logistic lasso regression,Features standardised,down,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+lights vs water,logistic lasso regression,Features standardised,up,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+lights vs water,logistic lasso regression,Features standardised,smote,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+lights vs water,logistic ridge regression,Features level,no sampling,0.767699115044248,0.826446280991736,0.648829431438127,0.735294117647059,0.943396226415094,0.866071428571429,0.518716577540107
+lights vs water,logistic ridge regression,Features level,down,0.763274336283186,0.823723228995058,0.63973063973064,0.730994152046784,0.943396226415094,0.863636363636364,0.508021390374332
+lights vs water,logistic ridge regression,Features level,up,0.761061946902655,0.821782178217822,0.63758389261745,0.730205278592375,0.939622641509434,0.855855855855856,0.508021390374332
+lights vs water,logistic ridge regression,Features level,smote,0.765486725663717,0.824503311258278,0.646666666666667,0.734513274336283,0.939622641509434,0.858407079646018,0.518716577540107
+lights vs water,logistic lasso regression,Features level,no sampling,0.736725663716814,0.801996672212978,0.607260726072607,0.717261904761905,0.909433962264151,0.793103448275862,0.491978609625669
+lights vs water,logistic lasso regression,Features level,down,0.725663716814159,0.794701986754967,0.586666666666667,0.707964601769912,0.905660377358491,0.778761061946903,0.470588235294118
+lights vs water,logistic lasso regression,Features level,up,0.732300884955752,0.799336650082919,0.598006644518272,0.71301775147929,0.909433962264151,0.789473684210526,0.481283422459893
+lights vs water,logistic lasso regression,Features level,smote,0.725663716814159,0.794701986754967,0.586666666666667,0.707964601769912,0.905660377358491,0.778761061946903,0.470588235294118
+lights vs water,Decision Tree,Features standardised,no sampling,0.734513274336283,0.790940766550523,0.636363636363637,0.73462783171521,0.856603773584906,0.734265734265734,0.561497326203209
+lights vs water,Decision Tree,Features standardised,down,0.72787610619469,0.762088974854932,0.682170542635659,0.781746031746032,0.743396226415094,0.66,0.705882352941177
+lights vs water,Decision Tree,Features standardised,up,0.767699115044248,0.824707846410684,0.655737704918033,0.739520958083832,0.932075471698113,0.847457627118644,0.53475935828877
+lights vs water,Decision Tree,Features standardised,smote,0.716814159292035,0.767272727272727,0.638418079096045,0.740350877192982,0.79622641509434,0.676646706586826,0.60427807486631
+lights vs water,Gradient Boosting,Features standardised,no sampling,0.774336283185841,0.827118644067797,0.67515923566879,0.750769230769231,0.920754716981132,0.834645669291339,0.566844919786096
+lights vs water,Gradient Boosting,Features standardised,down,0.763274336283186,0.816466552315609,0.666666666666667,0.748427672955975,0.89811320754717,0.798507462686567,0.572192513368984
+lights vs water,Gradient Boosting,Features standardised,up,0.769911504424779,0.821305841924399,0.677018633540373,0.753943217665615,0.90188679245283,0.807407407407407,0.582887700534759
+lights vs water,Gradient Boosting,Features standardised,smote,0.774336283185841,0.826530612244898,0.677215189873418,0.752321981424149,0.916981132075472,0.829457364341085,0.572192513368984
+lights vs water,Decision Tree,Features level,no sampling,0.734513274336283,0.790940766550523,0.636363636363637,0.73462783171521,0.856603773584906,0.734265734265734,0.561497326203209
+lights vs water,Decision Tree,Features level,down,0.730088495575221,0.785964912280702,0.634730538922156,0.734426229508197,0.845283018867925,0.72108843537415,0.566844919786096
+lights vs water,Decision Tree,Features level,up,0.763274336283186,0.821368948247079,0.649180327868853,0.736526946107785,0.928301886792453,0.838983050847458,0.529411764705882
+lights vs water,Decision Tree,Features level,smote,0.72787610619469,0.802568218298555,0.562277580071175,0.698324022346369,0.943396226415094,0.840425531914894,0.422459893048128
+lights vs water,Gradient Boosting,Features level,no sampling,0.776548672566372,0.829103214890017,0.677316293929713,0.751533742331288,0.924528301886792,0.841269841269841,0.566844919786096
+lights vs water,Gradient Boosting,Features level,down,0.77212389380531,0.823327615780446,0.679127725856698,0.754716981132076,0.905660377358491,0.813432835820896,0.582887700534759
+lights vs water,Gradient Boosting,Features level,up,0.769911504424779,0.820689655172414,0.679012345679012,0.755555555555556,0.89811320754717,0.802919708029197,0.588235294117647
+lights vs water,Gradient Boosting,Features level,smote,0.767699115044248,0.819277108433735,0.674922600619195,0.753164556962025,0.89811320754717,0.801470588235294,0.582887700534759
+Images basic features vs water,logistic ridge regression,Features standardised,no sampling,0.68141592920354,0.773584905660377,0.462686567164179,0.663072776280323,0.928301886792453,0.765432098765432,0.331550802139037
+Images basic features vs water,logistic ridge regression,Features standardised,down,0.688053097345133,0.778649921507064,0.471910112359551,0.666666666666667,0.935849056603774,0.7875,0.336898395721925
+Images basic features vs water,logistic ridge regression,Features standardised,up,0.68141592920354,0.773584905660377,0.462686567164179,0.663072776280323,0.928301886792453,0.765432098765432,0.331550802139037
+Images basic features vs water,logistic ridge regression,Features standardised,smote,0.679203539823009,0.772370486656201,0.456928838951311,0.661290322580645,0.928301886792453,0.7625,0.32620320855615
+Images basic features vs water,logistic lasso regression,Features standardised,no sampling,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic lasso regression,Features standardised,down,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic lasso regression,Features standardised,up,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic lasso regression,Features standardised,smote,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic ridge regression,Features level,no sampling,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic ridge regression,Features level,down,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic ridge regression,Features level,up,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic ridge regression,Features level,smote,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic lasso regression,Features level,no sampling,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic lasso regression,Features level,down,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic lasso regression,Features level,up,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,logistic lasso regression,Features level,smote,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images basic features vs water,Decision Tree,Features standardised,no sampling,0.705752212389381,0.776470588235294,0.56957928802589,0.7,0.871698113207547,0.721311475409836,0.470588235294118
+Images basic features vs water,Decision Tree,Features standardised,down,0.672566371681416,0.756578947368421,0.5,0.670553935860058,0.867924528301887,0.678899082568807,0.39572192513369
+Images basic features vs water,Decision Tree,Features standardised,up,0.674778761061947,0.759410801963993,0.498293515358362,0.670520231213873,0.875471698113208,0.688679245283019,0.390374331550802
+Images basic features vs water,Decision Tree,Features standardised,smote,0.672566371681416,0.73758865248227,0.564705882352941,0.695652173913044,0.784905660377359,0.627450980392157,0.513368983957219
+Images basic features vs water,Gradient Boosting,Features standardised,no sampling,0.723451327433628,0.785591766723842,0.610591900311527,0.720125786163522,0.864150943396226,0.73134328358209,0.524064171122995
+Images basic features vs water,Gradient Boosting,Features standardised,down,0.707964601769912,0.76,0.627118644067797,0.733333333333333,0.788679245283019,0.664670658682635,0.593582887700535
+Images basic features vs water,Gradient Boosting,Features standardised,up,0.716814159292035,0.771428571428571,0.627906976744186,0.732203389830509,0.815094339622642,0.687898089171975,0.577540106951872
+Images basic features vs water,Gradient Boosting,Features standardised,smote,0.719026548672566,0.776801405975395,0.62089552238806,0.726973684210526,0.833962264150943,0.702702702702703,0.556149732620321
+Images basic features vs water,Decision Tree,Features level,no sampling,0.705752212389381,0.776470588235294,0.56957928802589,0.7,0.871698113207547,0.721311475409836,0.470588235294118
+Images basic features vs water,Decision Tree,Features level,down,0.70353982300885,0.791925465838509,0.484615384615385,0.672823218997362,0.962264150943396,0.863013698630137,0.336898395721925
+Images basic features vs water,Decision Tree,Features level,up,0.670353982300885,0.732495511669659,0.570605187319885,0.698630136986301,0.769811320754717,0.61875,0.529411764705882
+Images basic features vs water,Decision Tree,Features level,smote,0.683628318584071,0.764415156507413,0.518518518518519,0.678362573099415,0.875471698113208,0.7,0.411764705882353
+Images basic features vs water,Gradient Boosting,Features level,no sampling,0.725663716814159,0.790540540540541,0.602564102564103,0.715596330275229,0.883018867924528,0.752,0.502673796791444
+Images basic features vs water,Gradient Boosting,Features level,down,0.696902654867257,0.74582560296846,0.624657534246575,0.733576642335767,0.758490566037736,0.640449438202247,0.609625668449198
+Images basic features vs water,Gradient Boosting,Features level,up,0.701327433628319,0.764397905759162,0.59214501510574,0.711038961038961,0.826415094339623,0.680555555555556,0.524064171122995
+Images basic features vs water,Gradient Boosting,Features level,smote,0.712389380530973,0.776632302405498,0.596273291925466,0.712933753943218,0.852830188679245,0.711111111111111,0.513368983957219
+Images VGG vs water,logistic ridge regression with pca,Features standardised,no sampling,0.707964601769912,0.785016286644951,0.544827586206897,0.69054441260745,0.909433962264151,0.766990291262136,0.422459893048128
+Images VGG vs water,logistic ridge regression with pca,Features standardised,down,0.652654867256637,0.76390977443609,0.343096234309623,0.635,0.958490566037736,0.788461538461538,0.219251336898396
+Images VGG vs water,logistic ridge regression with pca,Features standardised,up,0.630530973451327,0.753323485967504,0.26431718061674,0.618932038834951,0.962264150943396,0.75,0.160427807486631
+Images VGG vs water,logistic ridge regression with pca,Features standardised,smote,0.699115044247788,0.78343949044586,0.507246376811594,0.677685950413223,0.928301886792453,0.786516853932584,0.374331550802139
+Images VGG vs water,logistic lasso regression without pca,Features standardised,no sampling,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images VGG vs water,logistic lasso regression without pca,Features standardised,down,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images VGG vs water,logistic lasso regression without pca,Features standardised,up,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images VGG vs water,logistic lasso regression without pca,Features standardised,smote,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images VGG vs water,logistic ridge regression with pca,Features level,no sampling,0.741150442477876,0.802698145025295,0.62379421221865,0.725609756097561,0.89811320754717,0.782258064516129,0.518716577540107
+Images VGG vs water,logistic ridge regression with pca,Features level,down,0.736725663716814,0.807131280388979,0.585365853658537,0.707386363636364,0.939622641509434,0.84,0.449197860962567
+Images VGG vs water,logistic ridge regression with pca,Features level,up,0.732300884955752,0.805152979066023,0.57243816254417,0.702247191011236,0.943396226415094,0.84375,0.433155080213904
+Images VGG vs water,logistic ridge regression with pca,Features level,smote,0.736725663716814,0.803953871499176,0.599326599326599,0.713450292397661,0.920754716981132,0.809090909090909,0.475935828877005
+Images VGG vs water,logistic lasso regression without pca,Features level,no sampling,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images VGG vs water,logistic lasso regression without pca,Features level,down,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images VGG vs water,logistic lasso regression without pca,Features level,up,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images VGG vs water,logistic lasso regression without pca,Features level,smote,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Images VGG vs water,Decision Tree,Features standardised,no sampling,0.694690265486726,0.764505119453925,0.566037735849057,0.697819314641745,0.845283018867925,0.687022900763359,0.481283422459893
+Images VGG vs water,Decision Tree,Features standardised,down,0.685840707964602,0.741818181818182,0.598870056497175,0.715789473684211,0.769811320754717,0.634730538922156,0.566844919786096
+Images VGG vs water,Decision Tree,Features standardised,up,0.663716814159292,0.732394366197183,0.547619047619048,0.686468646864686,0.784905660377359,0.61744966442953,0.491978609625669
+Images VGG vs water,Decision Tree,Features standardised,smote,0.683628318584071,0.753872633390706,0.557275541795666,0.693037974683544,0.826415094339623,0.661764705882353,0.481283422459893
+Images VGG vs water,Gradient Boosting,Features standardised,no sampling,0.736725663716814,0.795180722891566,0.631578947368421,0.731012658227848,0.871698113207547,0.75,0.545454545454545
+Images VGG vs water,Gradient Boosting,Features standardised,down,0.707964601769912,0.743190661478599,0.661538461538462,0.767068273092369,0.720754716981132,0.635467980295567,0.689839572192513
+Images VGG vs water,Gradient Boosting,Features standardised,up,0.712389380530973,0.767857142857143,0.622093023255814,0.728813559322034,0.811320754716981,0.681528662420382,0.572192513368984
+Images VGG vs water,Gradient Boosting,Features standardised,smote,0.712389380530973,0.757462686567164,0.646739130434783,0.749077490774908,0.766037735849057,0.657458563535912,0.636363636363636
+Images VGG vs water,Decision Tree,Features level,no sampling,0.694690265486726,0.764505119453925,0.566037735849057,0.697819314641745,0.845283018867925,0.687022900763359,0.481283422459893
+Images VGG vs water,Decision Tree,Features level,down,0.650442477876106,0.707407407407407,0.565934065934066,0.694545454545455,0.720754716981132,0.581920903954802,0.550802139037433
+Images VGG vs water,Decision Tree,Features level,up,0.674778761061947,0.731261425959781,0.588235294117647,0.709219858156028,0.754716981132076,0.617647058823529,0.561497326203209
+Images VGG vs water,Decision Tree,Features level,smote,0.716814159292035,0.779310344827586,0.604938271604938,0.717460317460318,0.852830188679245,0.715328467153285,0.524064171122995
+Images VGG vs water,Gradient Boosting,Features level,no sampling,0.714601769911504,0.774080560420315,0.612612612612613,0.722222222222222,0.833962264150943,0.698630136986301,0.545454545454545
+Images VGG vs water,Gradient Boosting,Features level,down,0.701327433628319,0.74671669793621,0.636118598382749,0.742537313432836,0.750943396226415,0.641304347826087,0.631016042780749
+Images VGG vs water,Gradient Boosting,Features level,up,0.721238938053097,0.774193548387097,0.635838150289017,0.737201365187713,0.815094339622642,0.691823899371069,0.588235294117647
+Images VGG vs water,Gradient Boosting,Features level,smote,0.723451327433628,0.756335282651072,0.680306905370844,0.782258064516129,0.732075471698113,0.651960784313726,0.711229946524064
+Transfer learning vs water,logistic ridge regression with pca,Features standardised,no sampling,0.743362831858407,0.812903225806452,0.591549295774648,0.709859154929578,0.950943396226415,0.865979381443299,0.449197860962567
+Transfer learning vs water,logistic ridge regression with pca,Features standardised,down,0.634955752212389,0.757709251101322,0.260089686098655,0.620192307692308,0.973584905660377,0.805555555555556,0.155080213903743
+Transfer learning vs water,logistic ridge regression with pca,Features standardised,up,0.599557522123894,0.743988684582744,0.0812182741116751,0.595022624434389,0.992452830188679,0.8,0.0427807486631016
+Transfer learning vs water,logistic ridge regression with pca,Features standardised,smote,0.743362831858407,0.812903225806452,0.591549295774648,0.709859154929578,0.950943396226415,0.865979381443299,0.449197860962567
+Transfer learning vs water,logistic lasso regression without pca,Features standardised,no sampling,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Transfer learning vs water,logistic lasso regression without pca,Features standardised,down,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Transfer learning vs water,logistic lasso regression without pca,Features standardised,up,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Transfer learning vs water,logistic lasso regression without pca,Features standardised,smote,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Transfer learning vs water,logistic ridge regression with pca,Features level,no sampling,0.77212389380531,0.825719120135364,0.670926517571885,0.748466257668712,0.920754716981132,0.833333333333333,0.561497326203209
+Transfer learning vs water,logistic ridge regression with pca,Features level,down,0.77212389380531,0.825127334465195,0.673015873015873,0.75,0.916981132075472,0.828125,0.566844919786096
+Transfer learning vs water,logistic ridge regression with pca,Features level,up,0.769911504424779,0.823728813559322,0.668789808917198,0.747692307692308,0.916981132075472,0.826771653543307,0.561497326203209
+Transfer learning vs water,logistic ridge regression with pca,Features level,smote,0.77212389380531,0.826306913996627,0.668810289389068,0.746951219512195,0.924528301886792,0.838709677419355,0.556149732620321
+Transfer learning vs water,logistic lasso regression without pca,Features level,no sampling,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Transfer learning vs water,logistic lasso regression without pca,Features level,down,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Transfer learning vs water,logistic lasso regression without pca,Features level,up,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Transfer learning vs water,logistic lasso regression without pca,Features level,smote,0.586283185840708,0.739191073919107,,0.586283185840708,1,,0
+Transfer learning vs water,Decision Tree,Features standardised,no sampling,0.776548672566372,0.830820770519263,0.671009771986971,0.746987951807229,0.935849056603774,0.858333333333333,0.550802139037433
+Transfer learning vs water,Decision Tree,Features standardised,down,0.756637168141593,0.804964539007092,0.676470588235294,0.759197324414716,0.856603773584906,0.751633986928105,0.614973262032086
+Transfer learning vs water,Decision Tree,Features standardised,up,0.752212389380531,0.806228373702422,0.656441717791411,0.744408945686901,0.879245283018868,0.769784172661871,0.572192513368984
+Transfer learning vs water,Decision Tree,Features standardised,smote,0.765486725663717,0.820945945945946,0.66025641025641,0.743119266055046,0.916981132075472,0.824,0.550802139037433
+Transfer learning vs water,Gradient Boosting,Features standardised,no sampling,0.763274336283186,0.817094017094017,0.664576802507837,0.746875,0.90188679245283,0.803030303030303,0.566844919786096
+Transfer learning vs water,Gradient Boosting,Features standardised,down,0.752212389380531,0.802816901408451,0.666666666666667,0.752475247524752,0.860377358490566,0.751677852348993,0.598930481283422
+Transfer learning vs water,Gradient Boosting,Features standardised,up,0.75,0.799289520426288,0.668621700879765,0.75503355704698,0.849056603773585,0.74025974025974,0.609625668449198
+Transfer learning vs water,Gradient Boosting,Features standardised,smote,0.761061946902655,0.815699658703072,0.660377358490566,0.744548286604361,0.90188679245283,0.801526717557252,0.561497326203209
+Transfer learning vs water,Decision Tree,Features level,no sampling,0.776548672566372,0.830820770519263,0.671009771986971,0.746987951807229,0.935849056603774,0.858333333333333,0.550802139037433
+Transfer learning vs water,Decision Tree,Features level,down,0.765486725663717,0.81786941580756,0.670807453416149,0.750788643533123,0.89811320754717,0.8,0.577540106951872
+Transfer learning vs water,Decision Tree,Features level,up,0.752212389380531,0.807560137457045,0.652173913043478,0.741324921135647,0.886792452830189,0.777777777777778,0.561497326203209
+Transfer learning vs water,Decision Tree,Features level,smote,0.776548672566372,0.82793867120954,0.681388012618297,0.754658385093168,0.916981132075472,0.830769230769231,0.577540106951872
+Transfer learning vs water,Gradient Boosting,Features level,no sampling,0.761061946902655,0.813793103448276,0.666666666666667,0.749206349206349,0.890566037735849,0.788321167883212,0.577540106951872
+Transfer learning vs water,Gradient Boosting,Features level,down,0.72787610619469,0.780748663101604,0.641399416909621,0.739864864864865,0.826415094339623,0.705128205128205,0.588235294117647
+Transfer learning vs water,Gradient Boosting,Features level,up,0.741150442477876,0.790697674418605,0.660869565217391,0.751700680272109,0.833962264150943,0.721518987341772,0.609625668449198
+Transfer learning vs water,Gradient Boosting,Features level,smote,0.736725663716814,0.79304347826087,0.638297872340425,0.735483870967742,0.860377358490566,0.73943661971831,0.561497326203209
+Images VGG vs average income,logistic ridge regression with pca,Features standardised,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,logistic ridge regression with pca,Features standardised,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,logistic ridge regression with pca,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,logistic lasso regression without pca,Features standardised,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,logistic lasso regression without pca,Features standardised,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,logistic lasso regression without pca,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,logistic ridge regression with pca,Features level,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,logistic ridge regression with pca,Features level,up,0.923387096774194,0.05,0.960084033613445,0.142857142857143,0.0303030303030303,0.934560327198364,0.987041036717063
+Images VGG vs average income,logistic ridge regression with pca,Features level,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,logistic lasso regression without pca,Features level,smote,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,logistic lasso regression without pca,Features level,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,logistic lasso regression without pca,Features level,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,Decision Tree,Features standardised,smote,0.743951612903226,0.136054421768707,0.849704142011834,0.087719298245614,0.303030303030303,0.93979057591623,0.775377969762419
+Images VGG vs average income,Decision Tree,Features standardised,up,0.887096774193548,0.0666666666666667,0.939914163090129,0.0740740740740741,0.0606060606060606,0.933901918976546,0.946004319654428
+Images VGG vs average income,Decision Tree,Features standardised,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,Gradient Boosting,Features standardised,smote,0.828629032258064,0.205607476635514,0.903954802259887,0.148648648648649,0.333333333333333,0.947867298578199,0.863930885529158
+Images VGG vs average income,Gradient Boosting,Features standardised,up,0.933467741935484,0.0571428571428571,0.96551724137931,0.5,0.0303030303030303,0.935222672064777,0.997840172786177
+Images VGG vs average income,Gradient Boosting,Features standardised,no sampling,0.935483870967742,0.0588235294117647,0.966597077244259,1,0.0303030303030303,0.935353535353535,1
+Images VGG vs average income,Decision Tree,Features level,smote,0.770161290322581,0.173913043478261,0.866510538641686,0.114285714285714,0.363636363636364,0.946291560102302,0.799136069114471
+Images VGG vs average income,Decision Tree,Features level,up,0.899193548387097,0.21875,0.946120689655172,0.225806451612903,0.212121212121212,0.944086021505376,0.948164146868251
+Images VGG vs average income,Decision Tree,Features level,no sampling,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,Gradient Boosting,Features level,smote,0.836693548387097,0.213592233009709,0.90888638920135,0.157142857142857,0.333333333333333,0.948356807511737,0.872570194384449
+Images VGG vs average income,Gradient Boosting,Features level,up,0.933467741935484,,0.965589155370177,,0,0.933467741935484,1
+Images VGG vs average income,Gradient Boosting,Features level,no sampling,0.935483870967742,0.0588235294117647,0.966597077244259,1,0.0303030303030303,0.935353535353535,1
