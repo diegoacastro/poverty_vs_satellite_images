@@ -7,8 +7,8 @@ Created on Fri Jul 19 23:59:29 2019
 
 ### Libraries --------------------------------------------------------------
 
-import plaidml.keras
-plaidml.keras.install_backend()
+import plaidml.keras # Required if using AMD GPU
+plaidml.keras.install_backend() # Required if using AMD GPU
 import keras
 from keras.applications.vgg16 import VGG16
 from keras.preprocessing import image
@@ -84,9 +84,13 @@ y_all = np.asarray(trainLabels)
 
 np.save('input/model/x_all.npy', x_all)
 np.save('input/model/y_all.npy', y_all)
+
+del(a, all_figures, class_1_files, class_2_files, class_3_files, i, idx, 
+    path_1, path_2, path_3, t1, t2, trainData, trainLabels)
+gc.collect()
+
 #x_all = np.load('input/model/x_all.npy')
 #y_all = np.load('input/model/y_all.npy')
-
 
 ### Split data into training and testing -----------------------------------
 
@@ -226,7 +230,7 @@ model_transfer = Model(inputs=model.input,
 
 ### Read salary_city_files --------------------------------------------------
 
-salary_city_files = pd.read_csv('input/model/salary_city_file.txt')
+income_city_files = pd.read_csv('input/model/income_city_file.txt')
 
 
 ### extract features averaging values for each city ------------------------
@@ -234,11 +238,11 @@ salary_city_files = pd.read_csv('input/model/salary_city_file.txt')
 features_final = []
 pos = 0
 
-for city in salary_city_files['city_code'].unique():
+for city in income_city_files['city_code'].unique():
     features_temp = []
     pos += 1
     print(pos)
-    df_filter = salary_city_files[salary_city_files['city_code']==city]
+    df_filter = income_city_files[income_city_files['city_code']==city]
     for i in range(df_filter.shape[0]):
         img = image.load_img(df_filter.iloc[i, [2]][0])
         x = image.img_to_array(img)
@@ -253,11 +257,7 @@ for city in salary_city_files['city_code'].unique():
 
 features_final = np.asarray(features_final)
 
-#df_features_final = pd.DataFrame(data=features_final)
-
 
 ### Write features file -----------------------------------------------------
 
 np.savetxt('input/model/google_image_features_cnn_transfer.csv', features_final)
-
-#df_features_final.to_csv(path_or_buf='input/model/google_image_features_cnn_transfer_df.csv')

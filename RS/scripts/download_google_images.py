@@ -13,7 +13,7 @@ import requests
 # Define API parameters ------------------------------------------------------
 
 base_url = "https://maps.googleapis.com/maps/api/staticmap?"
-key = "AIzaSyAxSlP50j5FnVMaiUff8ETOTx_1-wzNPK4"
+key = "INCLUDE_YOUR_API_KEY_HERE"
 
 
 # Functions to download images -----------------------------------------------
@@ -32,14 +32,14 @@ def get_classified_images():
     with open('input/model/download_coordinates.txt') as f:
         for line in f:
             c += 1
-            if c > 1: # just to define the first line of the table to be downloaded
+            if c > 1: # skip header of the file
                 lst = line.split(',')
                 intensity = float(lst[5])
                 intensity_file = str(round(intensity * 100))
-                if intensity < 0.65:
+                if intensity <= 0.87: # upper limit for low radiance class
                     filename = image_folder_url + 'class1/' + str(lst[0]) + '_' + str(lst[6]) + '_' + str(lst[7]) + '_' + intensity_file + '.png'
                     download_image(lst[4], lst[3], filename)
-                elif intensity <= 2.55:
+                elif intensity <= 1037: # upper limit for medium radiance class
                     filename = image_folder_url + 'class2/' + str(lst[0]) + '_' + str(lst[6]) + '_' + str(lst[7]) + '_' + intensity_file + '.png'
                     download_image(lst[4], lst[3], filename)
                 else:

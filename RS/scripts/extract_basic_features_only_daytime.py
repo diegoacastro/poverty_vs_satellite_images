@@ -7,8 +7,8 @@ Created on Wed Jul 24 11:02:33 2019
 
 ### Libraries --------------------------------------------------------------
 
-import plaidml.keras
-plaidml.keras.install_backend()
+import plaidml.keras # Required if using AMD GPU
+plaidml.keras.install_backend() # Required if using AMD GPU
 import time
 import os
 import os.path

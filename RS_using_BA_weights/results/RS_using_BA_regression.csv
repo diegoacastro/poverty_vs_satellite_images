@@ -1,0 +1,41 @@
+Variable,Model,Detail,R2,RMSE,MAE
+Transfer learning vs gdp per capita,lasso regression,Features standardised and Y in log,,0.434733970368219,0.34590702942832
+Transfer learning vs gdp per capita,lasso regression,Features in level and Y in log,,0.434733970368219,0.34590702942832
+Transfer learning vs gdp per capita,lasso regression,Features standardised and Y in level,0.0990936753091376,18.5959058926613,11.4602866299791
+Transfer learning vs gdp per capita,lasso regression,Features and Y in level,0.11491627810701,18.6325445147002,11.7316383753002
+Transfer learning vs gdp per capita,ridge regression pca,Features standardised and Y in log,0.240081966062964,0.383758526889137,0.291963787000977
+Transfer learning vs gdp per capita,ridge regression pca,Features in level and Y in log,0.273315931092772,0.373227566868476,0.27472518672406
+Transfer learning vs gdp per capita,ridge regression pca,Features standardised and Y in level,0.120430748990275,18.2894443967559,11.4165288434081
+Transfer learning vs gdp per capita,ridge regression pca,Features and Y in level,0.174828605361197,17.8890685910157,10.7596003101938
+Transfer learning vs salary,lasso regression,Features standardised and Y in log,,0.206908856816666,0.154106196748684
+Transfer learning vs salary,lasso regression,Features in level and Y in log,,0.206908856816666,0.154106196748684
+Transfer learning vs salary,lasso regression,Features standardised and Y in level,0.104987107538324,369.112744838664,265.576719984644
+Transfer learning vs salary,lasso regression,Features and Y in level,0.123827326007899,364.9020045845,262.568883645939
+Transfer learning vs salary,ridge regression pca,Features standardised and Y in log,0.092593308715922,0.200749951101925,0.148996922225111
+Transfer learning vs salary,ridge regression pca,Features in level and Y in log,0.10364213054493,0.198737686696014,0.147863368223622
+Transfer learning vs salary,ridge regression pca,Features standardised and Y in level,0.099351388208256,379.021055444859,273.080081824598
+Transfer learning vs salary,ridge regression pca,Features and Y in level,0.106936666863973,384.794746126637,279.064384779092
+Transfer learning vs average income,lasso regression,Features standardised and Y in log,,0.266124244670787,0.218830663919956
+Transfer learning vs average income,lasso regression,Features in level and Y in log,,0.266124244670787,0.218830663919956
+Transfer learning vs average income,lasso regression,Features standardised and Y in level,0.336609752244247,182.922396672091,140.557906119082
+Transfer learning vs average income,lasso regression,Features and Y in level,0.344274117025764,182.432989049353,140.304286963631
+Transfer learning vs average income,ridge regression pca,Features standardised and Y in log,0.339383657672172,0.229624864788523,0.183364038920505
+Transfer learning vs average income,ridge regression pca,Features in level and Y in log,0.361394518899872,0.214319696073158,0.168441069178796
+Transfer learning vs average income,ridge regression pca,Features standardised and Y in level,0.330334753622257,183.002794280333,140.518236004743
+Transfer learning vs average income,ridge regression pca,Features and Y in level,0.349096852539456,180.898073680637,138.163551223834
+Transfer learning vs median income,lasso regression,Features standardised and Y in log,,0.206218271614687,0.134095329287807
+Transfer learning vs median income,lasso regression,Features in level and Y in log,,0.206218271614687,0.134095329287807
+Transfer learning vs median income,lasso regression,Features standardised and Y in level,0.40247447186477,84.2600632277784,58.4607037417149
+Transfer learning vs median income,lasso regression,Features and Y in level,0.390017558619553,85.0094933843926,59.1978864367985
+Transfer learning vs median income,ridge regression pca,Features standardised and Y in log,0.345342065996939,0.18075231400125,0.109049246613359
+Transfer learning vs median income,ridge regression pca,Features in level and Y in log,0.362964062193883,0.166381258327868,0.105866846197357
+Transfer learning vs median income,ridge regression pca,Features standardised and Y in level,0.40633917151902,83.7924092875127,57.728039612013
+Transfer learning vs median income,ridge regression pca,Features and Y in level,0.42313314140366,82.7895967653385,57.6414987609345
+Transfer learning vs water,lasso regression,Features standardised and Y in log,,0.187106440828326,0.141548493327937
+Transfer learning vs water,lasso regression,Features in level and Y in log,,0.187106440828326,0.141548493327937
+Transfer learning vs water,lasso regression,Features standardised and Y in level,,0.108422434849964,0.0857565226469049
+Transfer learning vs water,lasso regression,Features and Y in level,,0.108422434849964,0.0857565226469049
+Transfer learning vs water,ridge regression pca,Features standardised and Y in log,0.239969820128201,0.171136276967973,0.127653884260212
+Transfer learning vs water,ridge regression pca,Features in level and Y in log,0.273983373275615,0.162383132695877,0.11676699284514
+Transfer learning vs water,ridge regression pca,Features standardised and Y in level,0.286172545368383,0.100480338422821,0.079475820958285
+Transfer learning vs water,ridge regression pca,Features and Y in level,0.319551386842801,0.0906167700323392,0.0685063317247654

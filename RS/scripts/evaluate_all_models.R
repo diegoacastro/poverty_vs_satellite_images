@@ -7,8 +7,8 @@
 
 # Libraries ---------------------------------------------------------------
 
-#library(MASS)
-library(tidyverse)
+library(dplyr)
+library(stringr)
 library(caret)
 library(parallel)
 library(doParallel)
@@ -46,7 +46,7 @@ run_few_features_regression <- function(main_data, variable_name){
   
   # Define parameters grid
   
-  grid_search <- expand.grid(alpha = c(0, 1), standardize = c(TRUE, FALSE))
+  grid_search <- expand.grid(alpha = c(0, 1), standardize = c(TRUE), y_idx = c(1, 2))
   
   # Loop to test combinations of grids
   
@@ -66,15 +66,16 @@ run_few_features_regression <- function(main_data, variable_name){
     
     alpha <- i[[1]]
     standardize <- i[[2]]
-    y_idx <- ifelse(isTRUE(standardize), 1, 2)
+    y_idx <- i[[3]]
     
     
     # Names for final results
     
     model_name <- ifelse(alpha == 0, "ridge regression", "lasso regression")
-    detail_name <- ifelse(isTRUE(standardize), 
+    
+    detail_name <- ifelse(y_idx == 1, 
                           "Features standardised and Y in log", 
-                          "Features and Y in level")
+                          "Features standardised and Y in level")
     
     
     # Print to follow progress
@@ -108,8 +109,8 @@ run_few_features_regression <- function(main_data, variable_name){
                                                      savePredictions = "final"),
                             metric = "RMSE",
                             tuneGrid = expand.grid(alpha = alpha,
-                                                   lambda = 10^seq(0, 5, length.out = 10)))
-      
+                                                   lambda = exp(seq(-1, 5, length.out = 10))))
+
       
       # Train the model on the complete training set
       
@@ -207,7 +208,7 @@ run_few_features_classification <- function(main_data, variable_name){
   
   # Define parameters grid
   
-  grid_search <- expand.grid(alpha = c(0, 1), standardize = c(TRUE, FALSE))
+  grid_search <- expand.grid(alpha = c(0, 1), standardize = c(TRUE))
   
   # Loop to test combinations of grids
   
@@ -225,6 +226,7 @@ run_few_features_classification <- function(main_data, variable_name){
     # Names for final results
     
     model_name <- ifelse(alpha == 0, "logistic ridge regression", "logistic lasso regression")
+    
     detail_name <- ifelse(isTRUE(standardize), "Features standardised", "Features level")
     
     
@@ -235,7 +237,8 @@ run_few_features_classification <- function(main_data, variable_name){
     
     # Loop over sampling methods
     
-    for(j in c("no sampling", "down", "up", "smote")){
+    #for(j in c("no sampling", "down", "up", "smote")){ # In case other sampling methods are wanted
+    for(j in c("up")){
       
       print(j)
       
@@ -288,7 +291,7 @@ run_few_features_classification <- function(main_data, variable_name){
                               trControl = ctrl,
                               metric = "Accuracy",
                               tuneGrid = expand.grid(alpha = alpha,
-                                                     lambda = 10^seq(0, 5, length.out = 10)))
+                                                     lambda = exp(seq(-1, 5, length.out = 10))))
         
         
         # Train the model on the complete training set
@@ -392,7 +395,8 @@ run_few_features_classification <- function(main_data, variable_name){
     
     
     # Loop for each sampling method
-    for(j in c("no sampling", "down", "up", "smote")){
+    # for(j in c("no sampling", "down", "up", "smote")){ # In case other sampling methods are wanted
+    for(j in c("up")){
       
       print(j)
       
@@ -500,8 +504,7 @@ run_many_features_regression <- function(main_data, variable_name){
   
   # Define parameters grid
   
-  grid_search <- expand.grid(alpha = c(1), 
-                             standardize = c(TRUE, FALSE))
+  grid_search <- expand.grid(alpha = c(1), standardize = c(TRUE), y_idx = c(1, 2))
   
   
   # Loop to test combinations of grids
@@ -522,15 +525,16 @@ run_many_features_regression <- function(main_data, variable_name){
     
     alpha <- i[[1]]
     standardize <- i[[2]]
-    y_idx <- ifelse(isTRUE(standardize), 1, 2)
+    y_idx <- i[[3]]
     
     
     # Names for final results
     
     model_name <- "lasso regression"
-    detail_name <- ifelse(isTRUE(standardize), 
+    
+    detail_name <- ifelse(y_idx == 1, 
                           "Features standardised and Y in log", 
-                          "Features and Y in level")
+                          "Features standardised and Y in level")
     
     
     # Print to follow progress
@@ -564,9 +568,8 @@ run_many_features_regression <- function(main_data, variable_name){
                                                      savePredictions = "final"),
                             metric = "RMSE",
                             tuneGrid = expand.grid(alpha = alpha, #lambda = 0))
-                                                   lambda = 10^seq(0, 5, length.out = 10)))
-      #lambda = seq(0.5, 1000, length.out = 10)))
-      
+                                                   lambda = exp(seq(-1, 5, length.out = 10))))
+
       
       # Train the model on the complete training set
       
@@ -624,8 +627,7 @@ run_many_features_regression <- function(main_data, variable_name){
   
   # Define parameters grid
   
-  grid_search <- expand.grid(alpha = c(0), 
-                             standardize = c(TRUE, FALSE))
+  grid_search <- expand.grid(alpha = c(0), standardize = c(TRUE), y_idx = c(1, 2))
   
   # Loop to test combinations of grids
   
@@ -645,15 +647,16 @@ run_many_features_regression <- function(main_data, variable_name){
     
     alpha <- i[[1]]
     standardize <- i[[2]]
-    y_idx <- ifelse(isTRUE(standardize), 1, 2)
+    y_idx <- i[[3]]
     
     
     # Names for final results
     
     model_name <- "ridge regression pca"
-    detail_name <- ifelse(isTRUE(standardize), 
+    
+    detail_name <- ifelse(y_idx == 1, 
                           "Features standardised and Y in log", 
-                          "Features and Y in level")
+                          "Features standardised and Y in level")
     
     
     # Print to follow progress
@@ -688,7 +691,7 @@ run_many_features_regression <- function(main_data, variable_name){
                                                      savePredictions = "final"),
                             metric = "RMSE",
                             tuneGrid = expand.grid(alpha = alpha,
-                                                   lambda = 10^seq(0, 5, length.out = 10)))
+                                                   lambda = exp(seq(-1, 5, length.out = 10))))
       
       
       # Train the model on the complete training set
@@ -742,133 +745,6 @@ run_many_features_regression <- function(main_data, variable_name){
     
   }
   
-  
-  #### RIDGE REGRESSION LDA ####
-  
-  # # Define parameters grid
-  # 
-  # grid_search <- expand.grid(alpha = c(0), 
-  #                            standardize = c(TRUE, FALSE))
-  # 
-  # # Loop to test combinations of grids
-  # 
-  # for(idx in 1:nrow(grid_search)) {
-  #   
-  #   i <- grid_search[idx, ]
-  #   
-  #   # Variables to save results
-  #   R2_temp <- c()
-  #   RMSE_temp <- c() 
-  #   MAE_temp <- c()
-  #   
-  #   # Parameters
-  #   alpha <- i[[1]]
-  #   standardize <- i[[2]]
-  #   y_idx <- ifelse(isTRUE(standardize), 1, 2)
-  #   
-  #   # Names for final results
-  #   model_name <- "ridge regression lda"
-  #   detail_name <- ifelse(isTRUE(standardize), 
-  #                         "Features standardised and Y in log", 
-  #                         "Features and Y in level")
-  #   
-  #   # Print to follow progress
-  #   print(paste(model_name, detail_name, sep = " - "))
-  #   
-  #   # Loop for nested cv
-  #   for(indices in fold_ids){
-  #     
-  #     Xval <- main_data %>% 
-  #       slice(indices) %>% 
-  #       select(1:(dim(main_data)[2]-3)) %>% 
-  #       as.matrix()
-  #     
-  #     Yval <- main_data %>% 
-  #       slice(indices) %>% 
-  #       select((dim(main_data)[2]-y_idx)) %>% 
-  #       pull()
-  #     
-  #     Yval_groups <- main_data %>% 
-  #       slice(-indices) %>% 
-  #       select((dim(main_data)[2])) %>% 
-  #       pull()
-  #     
-  #     # Split data into folds for inner cv
-  #     fold_ids_inner <- createFolds(Yval_groups, k = 5, returTrain = TRUE)
-  #     
-  #     # temporary inner results
-  #     performance_temp <- data.frame()
-  #     
-  #     for(inner_fold in fold_ids_inner) {
-  #       
-  #       X_new <- Xval[inner_fold,]
-  #       Y_new <- Yval[inner_fold]
-  #       Y_new_groups <- Yval_groups[inner_fold]
-  #       
-  #       near_zero_var <- nearZeroVar(X_new, allowParallel = TRUE)
-  #       
-  #       X_new <- as.data.frame(X_new) %>% select(-near_zero_var)
-  #       
-  #       # Drop column with multicollinearity
-  #       col_to_drop <- findLinearCombos(X_new)
-  #       #hc = findCorrelation(X_new, cutoff = 1)
-  #       X_new <- as.data.frame(X_new) %>% select(-col_to_drop$remove) %>% as.matrix()
-  #       
-  #       lda <- lda(x = X_new, grouping = Y_new_groups)
-  #       
-  #       new_X_train = X_new %*% lda$scaling
-  #       #new_X_train = as.data.frame(new_X_train)
-  #       #new_X_train$class = Yval
-  #       
-  #       fit <- glmnet(new_X_train, Y_new, alpha = 0, lambda = seq(0.1, 5, length.out = 10))
-  #       
-  #       ### VERIFICAR SE FAZ SENTIDO USAR LDA E RIDGE REGRESSION
-  #       cv_fit_inner <- train(new_X_train, Y_new, 
-  #                             method = "lm", 
-  #                             #standardize = standardize,
-  #                             metric = "RMSE")
-  #                             #trControl = trainControl(allowParallel = TRUE),
-  #                             #tuneGrid = expand.grid(alpha = alpha, lambda = 0))
-  #                                                    #lambda = 10^seq(0, 5, length.out = 10)))
-  #                                                    #lambda = seq(0.1, 5, length.out = 10)))
-  #       
-  #       performance_temp <- bind_rows(performance_temp, cv_fit_inner$results)
-  #       
-  #     }
-  # 
-  #     
-  #     # Make predictions
-  #     
-  #     Xtest <- main_data %>% 
-  #       slice(-indices) %>% 
-  #       select(1:(dim(main_data)[2]-3)) %>%
-  #       as.matrix()
-  #     
-  #     Ytest <- main_data %>% 
-  #       slice(-indices) %>% 
-  #       select((dim(main_data)[2]-y_idx)) %>% 
-  #       pull()
-  #     
-  #     predictions_outer <- cv_fit_inner %>% predict(Xtest)
-  #     
-  #     # Evaluate
-  #     
-  #     R2_temp <-  c(R2_temp, R2(predictions_outer, Ytest))
-  #     RMSE_temp <- c(RMSE_temp, RMSE(predictions_outer, Ytest))
-  #     MAE_temp <- c(MAE_temp, MAE(predictions_outer, Ytest))
-  #     
-  #   }
-  #   
-  #   # Get average results
-  #   results_regression <- bind_rows(results_regression,
-  #                                   data.frame(Variable = variable_name, 
-  #                                              Model = model_name, 
-  #                                              Detail = detail_name,
-  #                                              R2 = mean(R2_temp), 
-  #                                              RMSE = mean(RMSE_temp),
-  #                                              MAE = mean(MAE_temp)))
-  #   
-  # }
   
   # Stop parallel cluster
   
@@ -931,8 +807,7 @@ run_many_features_classification <- function(main_data, variable_name){
   
   # Define parameters grid
   
-  grid_search <- expand.grid(alpha = c(0, 1), 
-                             standardize = c(TRUE, FALSE))
+  grid_search <- expand.grid(alpha = c(0, 1), standardize = c(TRUE))
   
   # Loop to test combinations of grids
   
@@ -961,7 +836,8 @@ run_many_features_classification <- function(main_data, variable_name){
     
     # Loop over sampling methods
     
-    for(j in c("no sampling", "down", "up", "smote")){
+    #for(j in c("no sampling", "down", "up", "smote")){ # If other sampling methods are wanted
+    for(j in c("up")){
       
       print(j)
       
@@ -1014,7 +890,7 @@ run_many_features_classification <- function(main_data, variable_name){
                               trControl = ctrl,
                               metric = "Accuracy",
                               tuneGrid = expand.grid(alpha = alpha,
-                                                     lambda = 10^seq(0, 5, length.out = 10)))
+                                                     lambda = exp(seq(-1, 5, length.out = 10))))
         
         
         # Train the model on the complete training set
@@ -1091,7 +967,7 @@ run_many_features_classification <- function(main_data, variable_name){
   # Define new grid
   
   grid_search <- expand.grid(model_type = c("rpart", "xgbTree"), 
-                             standardize = c(TRUE, FALSE))
+                             standardize = c(TRUE))
   
   # Run models
   
@@ -1115,7 +991,8 @@ run_many_features_classification <- function(main_data, variable_name){
     
     
     # Loop for each sampling method
-    for(j in c("no sampling", "down", "up", "smote")){
+    #for(j in c("no sampling", "down", "up", "smote")){ # If other sampling methods are wanted
+    for(j in c("up")){
       
       print(j)
       
@@ -1199,22 +1076,44 @@ gdp_per_capita_data <- data.table::fread("input/model/gdp_per_capita_df.txt") %>
   filter(state == "RS") %>% 
   select(city_code, gdp_per_capita)
 
-salary_data <- data.table::fread("input/model/average_salary_df.txt") %>% 
-  filter(state == "RS") %>% 
-  mutate(average_wage = average_wage/12) %>% # convert annual to monthly salary
-  select(city_code, average_wage)
-
 income_avg_data <- data.table::fread("input/model/income_avg_df.txt") %>% 
-  filter(state == "RS") %>% 
-  select(city_code = code, income)
-
-income_median_data <- data.table::fread("input/model/income_median_df.txt") %>% 
   filter(state == "RS") %>% 
   select(city_code = code, income)
 
 water_data <- data.table::fread("input/model/water_index.txt") %>% 
   filter(state == "RS") %>% 
   select(city_code, water_index)
+
+
+# Join all features -------------------------------------------------------
+
+all_features <- image_basic %>% 
+  inner_join(., lights %>% select(row_raster, col_raster, city_code, radiance), 
+             by = c("V1" = "row_raster", "V2" = "col_raster")) %>% 
+  group_by(city_code) %>% 
+  summarise(V3 = mean(V3),
+            V4 = mean(V4),
+            V5 = mean(V5),
+            V6 = mean(V6),
+            V7 = mean(V7),
+            V8 = mean(V8),
+            V9 = mean(V9),
+            V10 = mean(V10),
+            V11 = mean(V11),
+            V12 = mean(V12),
+            V13 = mean(V13),
+            V14 = mean(V14),
+            V15 = mean(V15),
+            V16 = mean(V16),
+            V17 = mean(V17),
+            radiance_mean = mean(radiance),
+            radiance_median = median(radiance),
+            radiance_max = max(radiance),
+            radiance_min = min(radiance),
+            radiance_std = sd(radiance)) %>% 
+  ungroup() %>% 
+  inner_join(., image_vgg, by = c("city_code" = "V4097")) %>% 
+  inner_join(., image_transfer, by = c("city_code" = "V4097"))
 
 
 # Join DFs and get final DF ------------------------------------------------
@@ -1276,58 +1175,10 @@ images_transfer_gdp <- image_transfer %>%
   select(-city_code)
 
 
-#### SALARY ####
-
-lights_salary <- lights %>%
-  left_join(., salary_data, by = "city_code") %>%
-  filter(!is.na(average_wage)) %>%
-  group_by(city_code) %>%
-  summarise(radiance_mean = mean(radiance),
-            radiance_median = median(radiance),
-            radiance_max = max(radiance),
-            radiance_min = min(radiance),
-            radiance_std = sd(radiance),
-            average_wage = min(average_wage)) %>%
-  ungroup() %>%
-  mutate(average_wage_log = log(average_wage),
-         label_class = ifelse(average_wage <= 1562.858, # Median of averary monthly salary
-                              "low",
-                              "high")) %>%
-  select(-city_code)
-
-
-images_basic_salary <- image_basic %>% 
-  inner_join(., lights %>% select(row_raster, col_raster, city_code), 
-             by = c("V1" = "row_raster", "V2" = "col_raster")) %>% 
-  select(-(1:2)) %>% 
-  group_by(city_code) %>% 
-  summarise_all(.funs = mean) %>% 
-  ungroup() %>% 
-  inner_join(., salary_data, by = "city_code") %>% 
-  mutate(average_wage_log = log(average_wage),
-         label_class = ifelse(average_wage <= 1562.858, # Median of averary monthly salary
-                              "low", 
-                              "high")) %>% 
-  select(-city_code)
-
-
-images_vgg_salary <- image_vgg %>% 
-  rename(city_code = V4097) %>% 
-  left_join(., salary_data, by = "city_code") %>% 
-  filter(!is.na(average_wage)) %>% 
-  mutate(average_wage_log = log(average_wage),
-         label_class = ifelse(average_wage <= 1562.858, # Median of averary monthly salary
-                              "low", 
-                              "high")) %>% 
-  select(-city_code)
-
-
-images_transfer_salary <- image_transfer %>% 
-  rename(city_code = V4097) %>% 
-  left_join(., salary_data, by = "city_code") %>% 
-  filter(!is.na(average_wage)) %>% 
-  mutate(average_wage_log = log(average_wage),
-         label_class = ifelse(average_wage <= 1562.858, # Median of averary monthly salary
+all_gdp <- all_features %>% 
+  inner_join(., gdp_per_capita_data, by = "city_code") %>% 
+  mutate(gdp_per_capita_log = log(gdp_per_capita),
+         label_class = ifelse(gdp_per_capita <= 15.8695, # Median of gdp per capita
                               "low", 
                               "high")) %>% 
   select(-city_code)
@@ -1390,58 +1241,10 @@ images_transfer_income_avg <- image_transfer %>%
   select(-city_code)
 
 
-#### MEDIAN INCOME ####
-
-lights_income_median <- lights %>%
-  left_join(., income_median_data, by = "city_code") %>%
-  filter(!is.na(income)) %>%
-  group_by(city_code) %>%
-  summarise(radiance_mean = mean(radiance),
-            radiance_median = median(radiance),
-            radiance_max = max(radiance),
-            radiance_min = min(radiance),
-            radiance_std = sd(radiance),
-            income = min(income)) %>%
-  ungroup() %>%
+all_income_avg <- all_features %>% 
+  inner_join(., income_avg_data, by = "city_code") %>% 
   mutate(income_log = log(income),
-         label_class = ifelse(income <= 450, # Median of median income
-                              "low",
-                              "high")) %>%
-  select(-city_code)
-
-
-images_basic_income_median <- image_basic %>% 
-  inner_join(., lights %>% select(row_raster, col_raster, city_code), 
-             by = c("V1" = "row_raster", "V2" = "col_raster")) %>% 
-  select(-(1:2)) %>% 
-  group_by(city_code) %>% 
-  summarise_all(.funs = mean) %>% 
-  ungroup() %>% 
-  inner_join(., income_median_data, by = "city_code") %>% 
-  mutate(income_log = log(income),
-         label_class = ifelse(income <= 450, # Median of median income
-                              "low", 
-                              "high")) %>% 
-  select(-city_code)
-
-
-images_vgg_income_median <- image_vgg %>% 
-  rename(city_code = V4097) %>% 
-  left_join(., income_median_data, by = "city_code") %>% 
-  filter(!is.na(income)) %>% 
-  mutate(income_log = log(income),
-         label_class = ifelse(income <= 450, # Median of median income
-                              "low", 
-                              "high")) %>% 
-  select(-city_code)
-
-
-images_transfer_income_median <- image_transfer %>% 
-  rename(city_code = V4097) %>% 
-  left_join(., income_median_data, by = "city_code") %>% 
-  filter(!is.na(income)) %>% 
-  mutate(income_log = log(income),
-         label_class = ifelse(income <= 450, # Median of median income
+         label_class = ifelse(income <= 537.16, # Median of average income
                               "low", 
                               "high")) %>% 
   select(-city_code)
@@ -1508,6 +1311,16 @@ images_transfer_water <- image_transfer %>%
   select(-c(city_code, city_code_reduced))
 
 
+all_water <- all_features %>% 
+  mutate(city_code_reduced = as.integer(str_sub(city_code, 1, 6))) %>%
+  inner_join(., water_data, by = c("city_code_reduced"="city_code")) %>% 
+  mutate(water_index_log = log(water_index),
+         label_class = ifelse(water_index <= 0.667, # Median of water index
+                              "low", 
+                              "high")) %>% 
+  select(-c(city_code, city_code_reduced))
+
+
 # Clean environment
 
 rm(lights, image_basic, image_vgg, image_transfer, gdp_per_capita_data,
@@ -1517,11 +1330,8 @@ gc()
 
 # Run models --------------------------------------------------------------
 
-#results_regression <- data.frame()
-#results_classification <- data.frame()
-
-results_regression <- data.table::fread("results/RS_regression.csv") %>% as.data.frame()
-results_classification <- data.table::fread("results/RS_classification.csv") %>% as.data.frame()
+results_regression <- data.frame()
+results_classification <- data.frame()
 
 #### REGRESSION ####
 
@@ -1554,45 +1364,20 @@ try({
 try({
   print("Regression - Transfer learning vs gdp per capita")
   results <- run_many_features_regression(images_transfer_gdp, "Transfer learning vs gdp per capita")
-  data.table::fwrite(results_regression, "results/RS_regression.csv")
-  rm(results)
-})
-gc()
-
-# SALARY
-
-try({
-  print("Regression - lights vs salary")
-  results <- run_few_features_regression(lights_salary, "lights vs salary")
   results_regression <- bind_rows(results_regression, results)
   data.table::fwrite(results_regression, "results/RS_regression.csv")
   rm(results)
 })
 
 try({
-  print("Regression - Images basic features vs salary")
-  results <- run_few_features_regression(images_basic_salary, "Images basic features vs salary")
-  results_regression <- bind_rows(results_regression, results)
-  data.table::fwrite(results_regression, "results/RS_regression.csv")
-  rm(results)
-})
-
-try({
-  print("Regression - Images VGG vs salary")
-  results <- run_many_features_regression(images_vgg_salary, "Images VGG vs salary")
-  results_regression <- bind_rows(results_regression, results)
-  data.table::fwrite(results_regression, "results/RS_regression.csv")
-  rm(results)
-})
-
-try({
-  print("Regression - Transfer learning vs salary")
-  results <- run_many_features_regression(images_transfer_salary, "Transfer learning vs salary")
+  print("Regression - All features vs gdp per capita")
+  results <- run_many_features_regression(all_gdp, "All features vs gdp per capita")
   results_regression <- bind_rows(results_regression, results)
   data.table::fwrite(results_regression, "results/RS_regression.csv")
   rm(results)
 })
 gc()
+
 
 # AVERAGE INCOME
 
@@ -1627,42 +1412,16 @@ try({
   data.table::fwrite(results_regression, "results/RS_regression.csv")
   rm(results)
 })
-gc()
-
-# MEDIAN INCOME
 
 try({
-  print("Regression - lights vs median income")
-  results <- run_few_features_regression(lights_income_median, "lights vs median income")
-  results_regression <- bind_rows(results_regression, results)
-  data.table::fwrite(results_regression, "results/RS_regression.csv")
-  rm(results)
-})
-
-try({
-  print("Regression - Images basic features vs median income")
-  results <- run_few_features_regression(images_basic_income_median, "Images basic features vs median income")
-  results_regression <- bind_rows(results_regression, results)
-  data.table::fwrite(results_regression, "results/RS_regression.csv")
-  rm(results)
-})
-
-try({
-  print("Regression - Images VGG vs median income")
-  results <- run_many_features_regression(images_vgg_income_median, "Images VGG vs median income")
-  results_regression <- bind_rows(results_regression, results)
-  data.table::fwrite(results_regression, "results/RS_regression.csv")
-  rm(results)
-})
-
-try({
-  print("Regression - Transfer learning vs median income")
-  results <- run_many_features_regression(images_transfer_income_median, "Transfer learning vs median income")
+  print("Regression - All features vs average income")
+  results <- run_many_features_regression(all_income_avg, "All features vs average income")
   results_regression <- bind_rows(results_regression, results)
   data.table::fwrite(results_regression, "results/RS_regression.csv")
   rm(results)
 })
 gc()
+
 
 ### WATER ###
 
@@ -1693,6 +1452,14 @@ try({
 try({
   print("Regression - Transfer learning vs water")
   results <- run_many_features_regression(images_transfer_water, "Transfer learning vs water")
+  results_regression <- bind_rows(results_regression, results)
+  data.table::fwrite(results_regression, "results/RS_regression.csv")
+  rm(results)
+})
+
+try({
+  print("Regression - All features vs water")
+  results <- run_many_features_regression(all_water, "All features vs water")
   results_regression <- bind_rows(results_regression, results)
   data.table::fwrite(results_regression, "results/RS_regression.csv")
   rm(results)
@@ -1740,41 +1507,12 @@ try({
   data.table::fwrite(results_classification, "results/RS_classification.csv")
 })
 
-
-### SALARY ###
-
 try({
-  print("Classification - lights vs salary")
-  results <- run_few_features_classification(lights_salary, "lights vs salary")
+  print("Classification - All features vs gdp per capita")
+  results <- run_many_features_classification(all_gdp, "All features vs gdp per capita")
   results_classification <- bind_rows(results_classification, results)
-  rm(results, lights_salary)
+  rm(results, all_gdp)
   gc()
-  data.table::fwrite(results_classification, "results/RS_classification.csv")
-})
-
-try({
-  print("Classification - Images basic features vs salary")
-  results <- run_few_features_classification(images_basic_salary, "Images basic features vs salary")
-  results_classification <- bind_rows(results_classification, results)
-  rm(results, images_basic_salary)
-  gc()
-  data.table::fwrite(results_classification, "results/RS_classification.csv")
-})
-
-try({
-  print("Classification - Images VGG vs salary")
-  results <- run_many_features_classification(images_vgg_salary, "Images VGG vs salary")
-  results_classification <- bind_rows(results_classification, results)
-  rm(results, images_vgg_salary)
-  gc()
-  data.table::fwrite(results_classification, "results/RS_classification.csv")
-})
-
-try({
-  print("Classification - Transfer learning vs salary")
-  results <- run_many_features_classification(images_transfer_salary, "Transfer learning vs salary")
-  results_classification <- bind_rows(results_classification, results)
-  rm(results, images_transfer_salary)
   data.table::fwrite(results_classification, "results/RS_classification.csv")
 })
 
@@ -1816,43 +1554,15 @@ try({
   data.table::fwrite(results_classification, "results/RS_classification.csv")
 })
 
-### MEDIAN INCOME ###
-
 try({
-  print("Classification - lights vs median income")
-  results <- run_few_features_classification(lights_income_median, "lights vs median income")
+  print("Classification - All features vs average income")
+  results <- run_many_features_classification(all_income_avg, "All features vs average income")
   results_classification <- bind_rows(results_classification, results)
-  rm(results, lights_income_median)
+  rm(results, all_income_avg)
   gc()
   data.table::fwrite(results_classification, "results/RS_classification.csv")
 })
 
-try({
-  print("Classification - Images basic features vs median income")
-  results <- run_few_features_classification(images_basic_income_median, "Images basic features vs median income")
-  results_classification <- bind_rows(results_classification, results)
-  rm(results, images_basic_income_median)
-  gc()
-  data.table::fwrite(results_classification, "results/RS_classification.csv")
-})
-
-try({
-  print("Classification - Images VGG vs median income")
-  results <- run_many_features_classification(images_vgg_income_median, "Images VGG vs median income")
-  results_classification <- bind_rows(results_classification, results)
-  rm(results, images_vgg_income_median)
-  gc()
-  data.table::fwrite(results_classification, "results/RS_classification.csv")
-})
-
-try({
-  print("Classification - Transfer learning vs median income")
-  results <- run_many_features_classification(images_transfer_income_median, "Transfer learning vs median income")
-  results_classification <- bind_rows(results_classification, results)
-  rm(results, images_transfer_income_median)
-  gc()
-  data.table::fwrite(results_classification, "results/RS_classification.csv")
-})
 
 ### WATER ###
 
@@ -1888,6 +1598,15 @@ try({
   results <- run_many_features_classification(images_transfer_water, "Transfer learning vs water")
   results_classification <- bind_rows(results_classification, results)
   rm(results, images_transfer_water)
+  gc()
+  data.table::fwrite(results_classification, "results/RS_classification.csv")
+})
+
+try({
+  print("Classification - All features vs water")
+  results <- run_many_features_classification(all_water, "All features vs water")
+  results_classification <- bind_rows(results_classification, results)
+  rm(results, all_water)
   gc()
   data.table::fwrite(results_classification, "results/RS_classification.csv")
 })

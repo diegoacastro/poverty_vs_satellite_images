@@ -1,8 +1,6 @@
-### Modified by: Diego Afonso de Castro
-### Source: https://github.com/Arshita27/Satellite_Imagery_ML/blob/master/scripts/get_coordinates.R
+### Created by: Diego Afonso de Castro
 ### Date: 05/07/2019
-### Objective: get radiance values, latitude, longitude, row index, column index from 
-###            night light images
+### Objective: get coordinates of nighttime lights points
 
 ### ------------------------------------------------------------------------ ###
 
