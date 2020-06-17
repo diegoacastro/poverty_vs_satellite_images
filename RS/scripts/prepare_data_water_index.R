@@ -27,8 +27,11 @@ data_final <- data %>%
          water_supply_index = names(.)[5],
          water_total_coliforms_index = names(.)[6]) %>% 
   na.omit() %>% 
-  mutate(water_quality_index = 100 - water_total_coliforms_index,
-         water_index = ((water_distribution_effectiveness + water_supply_index + water_quality_index)/3)/100) %>% 
+  mutate(
+    water_distribution_effectiveness = 100 - water_distribution_loss,
+    water_quality_index = 100 - water_total_coliforms_index,
+    water_index = ((water_distribution_effectiveness + water_supply_index + water_quality_index)/3)/100
+  ) %>% 
   select(-c(water_total_coliforms_index, water_distribution_loss))
 
 
