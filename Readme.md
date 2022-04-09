@@ -10,12 +10,12 @@ The steps bellow show how to reproduce the results (some adjusts may be necessar
 
 + Donwload nighttime lights data: https://ngdc.noaa.gov/eog/viirs/download_dnb_composites.html
 + Download poverty proxies: 
-		+ https://sidra.ibge.gov.br/  (number of the tables as on the report)
-		+ http://app4.cidades.gov.br/serieHistorica/ (in the link "municipios", download the variables IN049_AE, IN055_AE and IN084_AE)
+	+ https://sidra.ibge.gov.br/  (number of the tables as on the report)
+	+ http://app4.cidades.gov.br/serieHistorica/ (in the link "municipios", download the variables IN049_AE, IN055_AE and IN084_AE)
 + Download shape files for Brazil, Bahia and Rio Grande do Sul: https://portaldemapas.ibge.gov.br/ (click on "Organização do Território" -> "Malhas territoriais" -> "Malha de municípios")
 + Download file with geographic coordinates of each city (city centre) of Brazil: ftp://geoftp.ibge.gov.br/estrutura_territorial/localidades/Shapefile_SHP/BR_Localidades_2010_v1.shp
 
-## Save data in the correc directories
+## Save data in the correct directories
 
 First, save files in the correct directory for Rio Grande do Sul:
 
@@ -32,15 +32,15 @@ Run the scripts to generate results for Rio Grande do Sul in the following order
 
 + Create an R project called RS in the directory "RS";
 + In the folder "RS/scripts", run: 
-		+ the three R codes that start with "prepare_data_";
-		+ "get_nightlight_coordinates.R";
-		+ "associate_cities_nightlights.R";
-		+ "associate_images_income_city.R";
-		+ "get_all_br_cities_coordinates.R";
-		+ "nearest_nightlights_per_city.R";
-		+ "nearest_nightlights_per_city_BRAZIL.R";
-		+ "GMM_nightlights.py" (to define classes for nightime lights);
-		+ "get_thresholds_to_split_classification.R" (to define how to split classes into low and high income);
+	+ the three R codes that start with "prepare_data_";
+	+ "get_nightlight_coordinates.R";
+	+ "associate_cities_nightlights.R";
+	+ "associate_images_income_city.R";
+	+ "get_all_br_cities_coordinates.R";
+	+ "nearest_nightlights_per_city.R";
+	+ "nearest_nightlights_per_city_BRAZIL.R";
+	+ "GMM_nightlights.py" (to define classes for nightime lights);
+	+ "get_thresholds_to_split_classification.R" (to define how to split classes into low and high income);
 
 ## Get Google Maps Static images
 
